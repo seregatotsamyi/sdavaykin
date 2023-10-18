@@ -1,0 +1,164 @@
+.promo {
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 54.5vw;
+    height: auto;
+    pointer-events: none;
+    object-fit: contain;
+    z-index: 9;
+
+    @include adpt ($big-r) {
+      width: 69vw;
+    }
+
+    @include adpt ($bmob-r) {}
+  }
+
+  &__inner {
+    padding: 100px 0 50px;
+    position: relative;
+    z-index: 9;
+
+    @include adpt ($tab-r) {
+      padding-top: 80px;
+    }
+
+    @include adpt ($mtab-r) {
+      padding: 50px 0;
+    }
+
+    @include adpt ($stab-r) {
+      padding-top: 0;
+    }
+
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    width: calc(50% + 80px);
+    height: auto;
+    pointer-events: none;
+    right: -95px;
+    z-index: 1;
+
+    @include adpt ($big-r) {
+      width: calc(50% + 40px);
+      right: -20px;
+    }
+
+    @include adpt ($tab-r) {
+      width: calc(50% + 10px);
+    }
+
+    @include adpt ($mtab-r) {
+      width: 50%;
+    }
+
+    @include adpt ($stab-r) {
+      position: relative;
+      width: calc(100% + 20px);
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__subtitle {
+    font-size: 44px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+
+    @include adpt ($big-r) {
+      font-size: 41px;
+    }
+
+    @include adpt ($tab-r) {
+      font-size: 38px;
+    }
+
+    @include adpt ($mtab-r) {
+      font-size: 32px;
+    }
+
+    @include adpt ($stab-r) {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    @include adpt ($bmob-r) {
+      font-size: 26px;
+    }
+
+    @include adpt ($smob-r) {
+      font-size: 22px;
+    }
+  }
+
+  &__info {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+    max-width: 560px;
+    margin-bottom: 50px;
+
+    @include adpt ($tab-r) {
+      max-width: 545px;
+    }
+
+    @include adpt ($mtab-r) {
+      max-width: 54%;
+      grid-gap: 40px;
+    }
+
+    @include adpt ($stab-r) {
+      max-width: 500px;
+    }
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    @include adpt ($mtab-r) {
+      font-size: 15px;
+    }
+
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -30px;
+        height: 100%;
+        width: 1px;
+        background-color: $grey;
+
+        @include adpt ($mtab-r) {
+          right: -20px;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    @include adpt ($bmob-r) {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

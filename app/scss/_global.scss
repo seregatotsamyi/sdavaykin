@@ -53,8 +53,6 @@ body {
 .text-bold {
   font-weight: 700;
   font-size: 20px;
-
-  @include adpt ($bmob-r) {}
 }
 
 .btn {
@@ -68,6 +66,21 @@ body {
   @include adpt ($bmob-r) {
     font-size: 15px;
     padding: 7px 20px 5px;
+  }
+
+  &_2 {
+    background-color: $green;
+    transition: box-shadow 0.3s;
+    border-color: $green;
+    padding: 10px 30px 12px;
+
+    @include adpt ($bmob-r) {
+      padding: 10px 30px 9px;
+    }
+
+    &:hover {
+      box-shadow: 4px 4px 10px 0px rgba(107, 128, 137, 0.30);
+    }
   }
 }
 
@@ -85,4 +98,33 @@ body {
 
 ._fixed {
   overflow: hidden;
+}
+
+._h1 {
+  font-weight: 700;
+  font-size: 74px;
+  line-height: 1.2;
+
+  @include adpt ($big-r) {
+    font-size: 70px;
+  }
+
+  @include adpt ($tab-r) {
+    font-size: 66px;
+  }
+
+  @include adpt ($mtab-r) {
+    font-size: 54px;
+  }
+
+  @include adpt ($stab-r) {
+    font-size: 50px;
+  }
+
+  @include adpt ($bmob-r) {
+    font-size: 44px;
+  }
+  @include adpt ($smob-r) {
+    font-size: 40px;
+  }
 }

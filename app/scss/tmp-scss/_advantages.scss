@@ -31,7 +31,8 @@
       padding: 0 8px;
     }
   }
-  &__slide-wrap{
+
+  &__slide-wrap {
     @include adpt ($bmob-r) {
       padding: 0 5px;
       height: auto;
@@ -49,6 +50,7 @@
     @include adpt ($stab-r) {
       padding: 20px 10px;
     }
+
     @include adpt ($bmob-r) {
       border-color: $grey;
       padding: 20px;
@@ -72,20 +74,24 @@
   &__subtitle {
     margin-bottom: 22px;
   }
-  & .slick-list{
+
+  & .slick-list {
     @include adpt ($bmob-r) {
       margin: 0 -5px;
       overflow: visible;
     }
   }
-  & .slick-track{
+
+  & .slick-track {
     @include adpt ($bmob-r) {
       display: flex;
       align-items: stretch;
     }
   }
-  &__arrows{
+
+  &__arrows {
     display: none;
+
     @include adpt ($bmob-r) {
       display: flex;
     }

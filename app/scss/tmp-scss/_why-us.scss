@@ -1,0 +1,98 @@
+.why-us {
+  padding: 50px 0;
+  overflow: hidden;
+
+  &__title {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin: 0 auto 50px;
+
+    @include adpt ($bmob-r) {
+      max-width: 375px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__list {
+    max-width: 586px;
+    position: relative;
+    z-index: 2;
+
+    @include adpt ($mtab-r) {
+      max-width: 500px;
+    }
+
+    @include adpt ($stab-r) {
+      max-width: 100%;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(50% + 40px);
+    object-fit: contain;
+    max-width: 770px;
+    width: 100%;
+    pointer-events: none;
+    height: auto;
+    max-height: 100%;
+
+    @include adpt ($mtab-r) {
+      left: 50%;
+    }
+
+    @include adpt ($stab-r) {
+      left: -10%;
+      transform: translate(0);
+      top: 0;
+      height: 100%;
+      max-width: 770px;
+      width: auto;
+    }
+
+    @include adpt ($bmob-r) {
+      left: -370px;
+      top: -23px;
+      height: auto;
+      max-height: 100%;
+    }
+  }
+
+  &__item {
+    border-radius: 20px;
+    border: 1px solid transparent;
+    background-color: $white;
+    padding: 40px 30px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+
+    @include adpt ($tab-r) {
+      box-shadow: 4px 4px 10px 0px rgba(107, 128, 137, 0.30);
+      border-color: $grey;
+    }
+
+    @include adpt ($bmob-r) {
+      padding: 20px;
+    }
+
+    &:hover {
+      box-shadow: 4px 4px 10px 0px rgba(107, 128, 137, 0.30);
+      border-color: $grey;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+  }
+}

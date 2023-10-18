@@ -34,6 +34,10 @@
       padding-top: 0;
     }
 
+    @include adpt ($bmob-r) {
+      padding-bottom: 25px;
+    }
+
   }
 
   &__img {

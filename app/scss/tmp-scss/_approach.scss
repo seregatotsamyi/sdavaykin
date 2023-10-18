@@ -1,0 +1,46 @@
+.approach {
+  padding: 50px 0;
+
+  @include adpt ($bmob-r) {
+    padding: 25px 0;
+  }
+
+  &__title {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto 50px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 30px;
+      max-width: 420px;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+
+    @include adpt ($stab-r) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  &__img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 30px;
+    max-width: 360px;
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+  }
+}

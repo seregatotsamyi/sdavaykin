@@ -124,7 +124,30 @@ body {
   @include adpt ($bmob-r) {
     font-size: 44px;
   }
+
   @include adpt ($smob-r) {
     font-size: 40px;
+  }
+}
+
+._h2 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.2;
+
+  @include adpt ($mtab-r) {
+    font-size: 60px;
+  }
+
+  @include adpt ($stab-r) {
+    font-size: 42px;
+  }
+
+  @include adpt ($bmob-r) {
+    font-size: 28px;
+  }
+
+  @include adpt ($smob-r) {
+    font-size: 24px;
   }
 }

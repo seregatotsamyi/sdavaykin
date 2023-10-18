@@ -8,6 +8,25 @@ html {
   box-sizing: inherit;
 }
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $green transparent;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $green;
+    border-radius: 30px;
+    border: none;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
 ul,
 ol {
   padding: 0;

@@ -3,6 +3,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include adpt ($tab-r) {
+      width: 100%;
+    }
+
+    @include adpt ($stab-r) {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 
   &__item {
@@ -10,6 +19,30 @@
 
     &:not(:last-child) {
       margin-right: 29px;
+
+      @include adpt ($stab-r) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    &:nth-child(3) {
+      @include adpt ($stab-r) {
+        order: -2;
+        margin-bottom: 20px;
+      }
+    }
+
+    &:nth-child(2) {
+      @include adpt ($stab-r) {
+        order: -1;
+      }
+    }
+
+    &:nth-child(1) {
+      @include adpt ($stab-r) {
+        order: -3;
+      }
     }
   }
 
@@ -42,8 +75,20 @@
     position: relative;
     display: inline-block;
 
+    @include adpt ($stab-r) {
+      font-weight: 700;
+    }
+
+    @include adpt ($bmob-r) {
+      font-size: 18px;
+    }
+
     &._arrow {
       padding-right: 24px;
+
+      @include adpt ($stab-r) {
+        padding-right: 0;
+      }
 
       &::after {
         content: "";
@@ -57,6 +102,10 @@
         background-size: contain;
         background-position: center;
         transition: transform 0.3s;
+
+        @include adpt ($stab-r) {
+          display: none;
+        }
       }
 
       &::before {
@@ -74,6 +123,10 @@
       left: 0;
       opacity: 0;
       transition: opacity 0.3s;
+
+      @include adpt ($stab-r) {
+        display: none;
+      }
     }
   }
 
@@ -89,8 +142,22 @@
     pointer-events: none;
     transition: transform 0.3s, opacity 0.3s;
 
+    @include adpt ($stab-r) {
+      opacity: 1;
+      position: relative;
+      transform: translate(0);
+      padding-top: 10px;
+      left: 0;
+      width: 100%;
+      max-width: 170px;
+    }
+
     &._second {
       width: 260px;
+
+      @include adpt ($stab-r) {
+        width: 100%;
+      }
 
       & .menu__sublist {
         grid-template-columns: 1fr;
@@ -107,10 +174,22 @@
     background-color: #FDFDFF;
     box-shadow: 4px 4px 10px 0px rgba(107, 128, 137, 0.30);
     grid-gap: 10px 20px;
+
+    @include adpt ($stab-r) {
+      padding: 0;
+      box-shadow: none;
+      border: none;
+      border-radius: 0;
+    }
   }
 
   &__sublink {
     position: relative;
+
+    @include adpt ($stab-r) {
+      font-size: 15px;
+      display: block;
+    }
 
     &:hover {
       &::before {
@@ -128,11 +207,20 @@
       height: 100%;
       padding: 0;
       font-weight: 700;
-      transition: opacity 0.3s linear;
+      transition: opacity 0.2s linear;
       opacity: 0;
     }
-
-
   }
+
+  &__btn {
+    display: none;
+
+    @include adpt ($stab-r) {
+      display: block;
+      font-size: 15px;
+      padding: 7px 20px 5px;
+    }
+  }
+
 
 }

@@ -192,23 +192,8 @@
     }
 
     &:hover {
-      &::before {
-        opacity: 1;
-      }
-    }
-
-    &::before {
-      position: absolute;
-      content: attr(data-text);
-      top: 0;
-      left: 0;
-      width: 100%;
-      color: $grey;
-      height: 100%;
-      padding: 0;
       font-weight: 700;
-      transition: opacity 0.2s linear;
-      opacity: 0;
+      letter-spacing: -0.025em;
     }
   }
 

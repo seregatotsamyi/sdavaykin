@@ -1,0 +1,49 @@
+$accent: var(--accent-color);
+$grey: var(--grey-color);
+$white: var(--white-color);
+$green: var(--green-color);
+$yellowLight: var(--yellow-light-color);
+$yellow: var(--yellow-color);
+
+$mainFont: var(--main-font);
+
+
+:root {
+  --accent-color: #00A5FA;
+  --grey-color: #67676A;
+  --white-color: #ffffff;
+  --green-color: #A1DA67;
+  --yellow-light-color: #FFF1CB;
+  --yellow-color: #FFD152;
+
+
+
+  --main-font: 'Raleway', sans-serif;
+
+}
+
+
+
+$big-r: 1380;
+$desm-r: 1280;
+$tab-r: 1024;
+$mtab-r: 992;
+$stab-r: 768;
+$bmob-r: 576;
+
+
+
+
+@mixin adpt($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}
+
+@mixin adpt-mob($width) {
+  @media (min-width: #{$width}px) {
+    @content;
+  }
+}
+
+@include adpt ($bmob-r) {}

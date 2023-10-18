@@ -1,0 +1,42 @@
+.header {
+  position: relative;
+  z-index: 10;
+  padding: 20px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    padding-bottom: 19px;
+    border-bottom: 1px solid $grey;
+  }
+
+  &__logo-wrap {
+    flex: 1;
+    max-width: 360px;
+  }
+
+  &__nav-wrap {
+    flex: 1;
+    margin: 0 30px;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__right-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__phone {
+    text-align: center;
+  }
+
+  &__phone-link {
+    display: block;
+  }
+}

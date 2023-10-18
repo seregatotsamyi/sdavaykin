@@ -1,20 +1,21 @@
-$accent: var(--accent-color);
+
 $grey: var(--grey-color);
 $white: var(--white-color);
 $green: var(--green-color);
 $yellowLight: var(--yellow-light-color);
 $yellow: var(--yellow-color);
+$blue: var(--blue-color);
 
 $mainFont: var(--main-font);
 
 
 :root {
-  --accent-color: #00A5FA;
   --grey-color: #67676A;
   --white-color: #ffffff;
   --green-color: #A1DA67;
   --yellow-light-color: #FFF1CB;
   --yellow-color: #FFD152;
+  --blue-color: #8FA9FF;
 
 
 
@@ -27,7 +28,7 @@ $mainFont: var(--main-font);
 $big-r: 1380;
 $desm-r: 1280;
 $tab-r: 1024;
-$mtab-r: 890;
+$mtab-r: 980;
 $stab-r: 768;
 $bmob-r: 576;
 $smob-r: 380;

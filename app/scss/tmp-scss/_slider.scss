@@ -1,0 +1,25 @@
+.slider-arrow {
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &_prev {
+    transform: rotate(180deg);
+  }
+
+  &__img {
+    object-fit: contain;
+  }
+
+}
+
+.slider {
+  &__arrows {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,127 @@
+.input {
+  &__input {
+    max-width: 100%;
+    width: 100%;
+    padding: 8px 20px 9px;
+    background-color: $white;
+    border-radius: 20px;
+    transition: box-shadow 0.3s;
+    outline: none;
+    @include adpt ($bmob-r){
+      padding: 10px 20px 7px;
+    }
+
+    &::placeholder {
+      color: $grey;
+      opacity: 0.6;
+    }
+
+    &:focus,
+    &:active {
+      box-shadow: 4px 4px 10px 0px rgba(107, 128, 137, 0.30);
+
+    }
+
+    &._select {
+      padding: 0;
+      border-radius: 0;
+      background-color: transparent;
+
+      &:focus,
+      &:active {
+        box-shadow: none;
+
+      }
+    }
+  }
+
+  & .jq-selectbox__select {
+    height: 40px;
+    border-radius: 20px;
+    padding: 8px 20px 9px;
+    padding-right: 54px;
+    border: none;
+    background: $white;
+    box-shadow: none;
+    font: inherit;
+    color: $grey;
+    text-shadow: none;
+    transition: all 0.3s;
+  }
+
+  & .jq-selectbox .placeholder {
+    color: $grey;
+  }
+
+  & .jq-selectbox {
+    &.focused {
+      & .jq-selectbox__select {
+        border: none;
+      }
+    }
+
+    &.opened {
+      & .jq-selectbox__select {
+        border-radius: 20px 20px 0 0;
+      }
+
+      & .jq-selectbox__trigger-arrow {
+        transform: rotate(180deg) translateY(calc(50% - 4px));
+      }
+    }
+
+    & li {
+      padding: 0;
+      color: $grey;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      &:hover {
+        background: none;
+        color: $grey;
+        font-weight: 700;
+      }
+
+      &.selected {
+        background: none;
+      }
+    }
+  }
+
+  & .jq-selectbox__trigger {
+    border-left: none;
+    right: 20px;
+  }
+
+  & .jq-selectbox__trigger-arrow {
+    width: 24px;
+    height: 24px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-image: url('../images/icon/chevron-down.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: transform 0.3s;
+  }
+
+  & .jq-selectbox__dropdown {
+    margin: 0;
+    border: none;
+    border-radius: 0 0 20px 20px;
+    background-color: $white;
+    padding: 11px 20px 20px;
+    box-shadow: 4px 7px 7px 0px rgba(107, 128, 137, 0.20);
+    font: inherit;
+  }
+
+  & .jq-selectbox__select-text{
+    @include adpt ($bmob-r){
+      line-height: 1.8;
+    }
+  }
+}

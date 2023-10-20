@@ -1,0 +1,98 @@
+.consultation {
+  padding: 50px 0;
+
+  @include adpt ($bmob-r) {
+    padding: 25px 0;
+  }
+
+  &__title {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto 50px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    aspect-ratio: 43/31;
+    width: 100%;
+    height: auto;
+    max-width: 430px;
+    background-image: url('../images/decor/consultation.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 60px 22px 81px 50px;
+    text-align: center;
+
+    @include adpt ($stab-r) {
+      margin: 0 auto;
+      position: relative;
+      margin-top: -20px;
+      max-width: 370px;
+    }
+
+    @include adpt ($bmob-r) {
+      max-width: 340px;
+      padding: 33px 20px 65px 41px;
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+
+    @include adpt ($mtab-r) {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    @include adpt ($bmob-r) {
+      font-size: 15px;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 430px;
+    grid-gap: 50px;
+    align-items: flex-start;
+
+    @include adpt ($tab-r) {
+      grid-gap: 30px;
+    }
+
+    @include adpt ($mtab-r) {
+      grid-template-columns: 1fr 350px;
+    }
+
+    @include adpt ($stab-r) {
+      grid-template-columns: 1fr;
+      grid-gap: 0px;
+    }
+  }
+
+  &__form {
+    border-radius: 30px;
+    padding: 40px 30px;
+    background-color: $yellowLight;
+    box-shadow: 4px 4px 10px 0px rgba(107, 128, 137, 0.30);
+
+    @include adpt ($bmob-r) {
+      padding: 30px 20px;
+    }
+  }
+
+  &__text-text {
+    @include adpt ($mtab-r) {
+      font-size: 16px;
+    }
+
+    @include adpt ($bmob-r) {
+      font-size: 15px;
+    }
+  }
+}

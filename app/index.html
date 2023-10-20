@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>School - разработка https://moskalevs.ru/</title>
   <link rel="stylesheet" href="libs/slick.css">
+  <link rel="stylesheet" href="libs/jquery.formstyler.css">
+  <link rel="stylesheet" href="libs/jquery.formstyler.theme.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -495,6 +497,68 @@
     </div>
   </section>
 
+  <section class="consultation">
+    <div class="container">
+      <div class="consultation__title _h2">
+        Получите подробную консультацию
+      </div>
+      <div class="consultation__inner">
+
+        <form class="consultation__form">
+          <div class="form">
+            <div class="form__row">
+              <div class="form__inputs">
+                <div class="input">
+                  <input class="input__input" type="text" placeholder="Ваше имя" name="name">
+                </div>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__inputs">
+                <div class="input">
+                  <input class="input__input tel" type="tel" placeholder="Номер телефона" name="phone">
+                </div>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__inputs">
+                <div class="input">
+                  <select class="input__input _select js-select" name="connection"
+                    data-placeholder="Как с вами связаться?">
+                    <option></option>
+                    <option value="phone">Телефон </option>
+                    <option value="WhatsApp ">WhatsApp </option>
+                    <option value="Telegram ">Telegram </option>
+                  </select>
+                </div>
+              </div>
+              <button class="form__btn btn btn_3" type="submit">
+                Отправить
+              </button>
+
+
+            </div>
+            <div class="form__policy">
+              <span>Нажимая кнопку, вы соглашаетесь </span><a href="#">на обработку своих персональных данных</a>
+            </div>
+
+          </div>
+        </form>
+
+        <div class="consultation__text">
+          <div class="consultation__subtitle text-bold">
+            Заполните форму слева
+          </div>
+          <div class="consultation__text-text">
+            И с вами оперативно свяжется наш опытный консультант. Он обязательно подскажет, какой тариф оптимально
+            выбрать в конкретном случае и разъяснит вопросы организационного свойства
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="footer">
@@ -683,6 +747,7 @@
 </footer>
 
 <script src="libs/jquery.min.js"></script>
+<script src="libs/jquery.formstyler.min.js"></script>
 <script src="libs/slick.min.js"></script>
 <script src="js/main.min.js"></script>
 </body>

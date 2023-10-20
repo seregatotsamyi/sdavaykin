@@ -1,0 +1,53 @@
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  
+
+  &__row {
+    display: flex;
+    align-items: center;
+
+    @include adpt ($tab-r) {
+      flex-direction: column;
+    }
+  }
+
+  &__inputs {
+    flex: 1;
+
+    @include adpt ($tab-r) {
+      width: 100%;
+    }
+
+    &:not(:last-child) {
+      margin-right: 20px;
+
+      @include adpt ($tab-r) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__policy {
+    font-size: 15px;
+    opacity: 0.6;
+
+    @include adpt ($tab-r) {
+      text-align: center;
+    }
+
+    & a {
+      display: initial;
+      position: relative;
+      text-decoration: underline;
+
+    }
+  }
+
+  &__btn {
+    padding: 9px 30px;
+  }
+
+}

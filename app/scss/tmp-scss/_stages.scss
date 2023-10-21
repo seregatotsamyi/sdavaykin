@@ -1,0 +1,171 @@
+.stages {
+  padding: 50px 0;
+
+  @include adpt ($bmob-r) {
+    padding: 25px 0;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2vw;
+
+    @include adpt ($stab-r) {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 0 20px;
+    }
+  }
+
+  &__img {
+    width: 70%;
+    top: 11%;
+    left: 18%;
+    position: absolute;
+    z-index: 1;
+    height: auto;
+    object-fit: contain;
+
+    @include adpt ($tab-r) {
+      width: 73%;
+      top: 12%;
+    }
+
+    @include adpt ($stab-r) {
+      display: none;
+    }
+  }
+
+  &__item {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+
+    &._1 {
+      & .stages__number {
+        &::after {
+          background-color: $green;
+        }
+      }
+    }
+
+    &._2 {
+      margin-top: 270px;
+
+      @include adpt ($mtab-r) {
+        margin-top: 216px;
+      }
+
+      @include adpt ($stab-r) {
+        margin-top: 40px;
+      }
+
+      & .stages__number {
+        &::after {
+          background-color: $yellow;
+        }
+      }
+    }
+
+    &._3 {
+      margin-top: 50px;
+
+      @include adpt ($stab-r) {
+        margin-top: 0;
+      }
+
+      & .stages__number {
+        &::after {
+          background-color: $purple;
+        }
+      }
+    }
+
+    &._4 {
+      max-width: 263px;
+      margin-top: 200px;
+
+      @include adpt ($mtab-r) {
+        margin-top: 170px;
+      }
+
+      @include adpt ($stab-r) {
+        margin-top: 32px;
+      }
+
+      & .stages__number {
+        &::after {
+          background-color: $blue;
+        }
+      }
+    }
+  }
+
+  &__number {
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 90px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: $white;
+    margin: 0 auto 30px;
+
+    text-shadow:
+      -0 -2px 0 #67676A,
+      0 -1px 0 #67676A,
+      -0 1px 0 #67676A,
+      0 1px 0 #67676A,
+      -1px -0 0 #67676A,
+      1px -0 0 #67676A,
+      -1px 0 0 #67676A,
+      1px 0 0 #67676A,
+      -1px -1px 0 #67676A,
+      1px -1px 0 #67676A,
+      -1px 1px 0 #67676A,
+      1px 1px 0 #67676A,
+      -1px -1px 0 #67676A,
+      1px -1px 0 #67676A,
+      -1px 1px 0 #67676A,
+      1px 1px 0 #67676A;
+    border: 1px solid $grey;
+
+    @include adpt ($smob-r) {
+      width: 140px;
+      height: 140px;
+      font-size: 85px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      width: 100%;
+      z-index: -1;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+
+    @include adpt ($smob-r) {
+      font-size: 18px;
+    }
+  }
+}

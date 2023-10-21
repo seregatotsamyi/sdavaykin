@@ -157,6 +157,63 @@ $(function () {
     body.toggleClass('_fixed')
   })
 
+
+  //reviews
+  $('.js-slider-reviews').slick({
+    slidesToShow: 3,
+
+    infinite: false,
+    appendArrows: '.reviews__arrows',
+    prevArrow: '<div class="slider-arrow slider-arrow_prev">      <img class="slider-arrow__img" src="images/icon/slider-right.svg" alt="slider-right.svg" width="30"        height="30">    </div>',
+    nextArrow: ' <div class="slider-arrow slider-arrow_next">      <img class="slider-arrow__img" src="images/icon/slider-right.svg" alt="slider-right.svg" width="30"        height="30">    </div>',
+    responsive: [{
+        breakpoint: 980,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+
+        }
+      },
+    ]
+  })
+
+  function countLines(el, lh) {
+    let divHeight = $(el).height()
+    console.log(divHeight / lh)
+    return divHeight / lh;
+  }
+
+  if (width > 576) {
+    $('.reviews__text').each(function (index) {
+      let lines = countLines($(this).find('p'), 23)
+
+      if (lines > 18) {
+        $(this).addClass('_hide')
+        $(this).find('.reviews__btn').addClass('_show')
+      }
+    })
+  } else {
+    $('.reviews__text').each(function (index) {
+      let lines = countLines($(this).find('p'), 19)
+
+      if (lines > 14) {
+        $(this).addClass('_hide')
+        $(this).find('.reviews__btn').addClass('_show')
+      }
+    })
+  }
+  $(document).on('click', '.reviews__btn', function () {
+    $(this).toggleClass('_active')
+    $(this).siblings("p").toggleClass('_show')
+    $(this).parent().toggleClass('_show')
+  })
+  //reviews
+
   if (width < 577) {
     $('.js-advantages-slider').slick({
       autoplay: true,

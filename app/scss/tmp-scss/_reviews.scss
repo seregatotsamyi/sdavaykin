@@ -1,0 +1,212 @@
+.reviews {
+  position: relative;
+  padding: 50px 0;
+
+  @include adpt ($bmob-r) {
+    padding: 25px 0;
+    overflow: hidden;
+  }
+
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(-20%);
+    width: 100%;
+    height: auto;
+    max-width: 750px;
+    z-index: -1;
+
+    @include adpt ($big-r) {
+      left: -300px;
+    }
+
+    @include adpt ($bmob-r) {
+      display: none;
+    }
+  }
+
+  &__title {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    margin-bottom: 50px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__inner {
+    position: relative;
+
+  }
+
+  &__slider {
+    padding: 2px 1px;
+    overflow: hidden;
+
+    @include adpt ($bmob-r) {
+      overflow: visible;
+    }
+
+  }
+
+  &__slide-wrap {
+    padding: 0 15px;
+    height: auto;
+
+    @include adpt ($bmob-r) {
+      padding: 0 5px;
+    }
+  }
+
+  &__slide {
+    border-radius: 20px;
+    padding: 40px 30px;
+    background-color: $white;
+    z-index: 3;
+    border: 1px solid $grey;
+    height: 100%;
+
+    @include adpt ($bmob-r) {
+      padding: 20px;
+    }
+  }
+
+  & .slick-list {
+    margin: 0 -15px;
+    padding: 0 1px;
+    overflow: visible;
+
+    @include adpt ($stab-r) {
+      overflow: hidden;
+    }
+
+    @include adpt ($bmob-r) {
+      margin: 0 -5px;
+      overflow: visible;
+    }
+  }
+
+  &__arrows {
+    // position: absolute;
+  }
+
+  & .slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    z-index: 5;
+    left: -15px;
+    transition: opacity 0.3s;
+
+    & img {
+      transition: opacity 0.3s;
+    }
+
+    &.slick-disabled {
+      background-color: $yellowLight;
+      border-radius: 50%;
+
+      & img {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  & .slider-arrow_next {
+    transform: translateY(-50%);
+    left: auto;
+    right: -15px;
+  }
+
+  &__author {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  & .slick-track {
+    display: flex;
+    align-items: stretch;
+  }
+
+  &__btn {
+    display: none;
+    margin: 10px 0;
+    color: $blue;
+    padding-right: 24px;
+    position: relative;
+
+
+    &._show {
+      display: inline-block;
+    }
+
+    &._active {
+      & .two {
+        display: inline-block;
+      }
+
+      & .one {
+        display: none;
+      }
+
+      &::after {
+        transform: rotate(180deg) translateY(-2px);
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      right: 0;
+      top: 0;
+      background-image: url('../images/icon/chevron-down-blue.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      transition: transform 0.3s;
+
+      @include adpt ($bmob-r) {
+        top: -2px;
+      }
+    }
+
+    & .two {
+      display: none;
+    }
+  }
+
+  &__text {
+    position: relative;
+
+    &._hide {
+      & p {
+        -webkit-line-clamp: 18;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+        @include adpt ($bmob-r) {
+          -webkit-line-clamp: 14;
+        }
+      }
+    }
+
+    & p {
+      line-height: 23px;
+
+      @include adpt ($bmob-r) {
+        line-height: 19px;
+      }
+
+
+      &._show {
+        -webkit-line-clamp: initial;
+      }
+    }
+  }
+}

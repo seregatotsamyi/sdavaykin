@@ -7,7 +7,8 @@
     border-radius: 20px;
     transition: box-shadow 0.3s;
     outline: none;
-    @include adpt ($bmob-r){
+
+    @include adpt ($bmob-r) {
       padding: 10px 20px 7px;
     }
 
@@ -119,8 +120,8 @@
     font: inherit;
   }
 
-  & .jq-selectbox__select-text{
-    @include adpt ($bmob-r){
+  & .jq-selectbox__select-text {
+    @include adpt ($bmob-r) {
       line-height: 1.8;
     }
   }

@@ -1,0 +1,89 @@
+.escort {
+  padding: 50px 0;
+
+  @include adpt ($bmob-r) {
+    padding: 25px 0;
+  }
+
+  &__inner {
+    position: relative;
+    padding: 40px 30px;
+    border-radius: 20px;
+    background-color: $yellowLight;
+    box-shadow: 4px 4px 10px 0px rgba(107, 128, 137, 0.30);
+
+    @include adpt ($bmob-r) {
+      padding: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+
+    @include adpt ($stab-r) {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    width: 100%;
+    max-width: 250px;
+    aspect-ratio: 1/1;
+    pointer-events: none;
+    height: auto;
+    bottom: -50px;
+    right: -50px;
+    z-index: 1;
+
+    @include adpt ($desm-r) {
+      right: -20px;
+    }
+
+    @include adpt ($tab-r) {
+      right: 0;
+    }
+
+    @include adpt ($stab-r) {
+      display: none;
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 2;
+    max-width: 710px;
+    font-weight: 700;
+    margin-bottom: 40px;
+
+    @include adpt ($tab-r) {
+      max-width: 100%;
+      padding-right: 270px;
+    }
+
+    @include adpt ($stab-r) {
+      text-align: center;
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
+
+    @include adpt ($bmob-r) {
+      font-size: 18px;
+    }
+  }
+
+  &__btn {
+    @include adpt ($stab-r) {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

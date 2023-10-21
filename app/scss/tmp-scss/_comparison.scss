@@ -1,0 +1,135 @@
+.comparison {
+  padding: 50px 0;
+
+  @include adpt ($bmob-r) {
+    padding: 30px 0;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 auto 50px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: minmax(300px, 350px) minmax(350px, 380px) minmax(350px, 380px);
+    align-items: center;
+
+    @include adpt ($big-r) {
+      grid-template-columns: minmax(285px, 350px) minmax(350px, 380px) minmax(350px, 380px);
+    }
+
+    @include adpt ($tab-r) {
+      grid-template-columns: minmax(260px, 350px) minmax(350px, 380px) minmax(350px, 380px);
+    }
+
+    @include adpt ($mtab-r) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include adpt ($bmob-r) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__img-wrap {
+    position: relative;
+    right: -20px;
+    z-index: 3;
+
+    @include adpt ($mtab-r) {
+      display: none;
+    }
+  }
+
+  &__img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+  }
+
+  &__sec-item {
+    position: relative;
+    padding: 40px 30px;
+    border-radius: 20px;
+    background-color: $white;
+    z-index: 1;
+    left: -14px;
+    border: 1px solid $grey;
+
+    @include adpt ($stab-r) {
+      padding: 20px;
+    }
+
+    @include adpt ($bmob-r) {
+      left: 0;
+      top: -10px;
+      margin-left: 25px;
+    }
+
+    &_big {
+      box-shadow: 4px 4px 10px 0px rgba(107, 128, 137, 0.30);
+      background-color: $greenLight;
+      border: none;
+      z-index: 2;
+      left: 0;
+
+      @include adpt ($mtab-r) {
+        padding: 60px 30px;
+      }
+
+      @include adpt ($stab-r) {
+        padding: 40px 20px;
+      }
+
+      @include adpt ($bmob-r) {
+        padding: 20px;
+        top: 0;
+        margin-right: 25px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 34px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &._2 {
+      &::after {
+        background-image: url('../images/icon/cross.svg');
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url('../images/icon/check.svg');
+
+    }
+  }
+}

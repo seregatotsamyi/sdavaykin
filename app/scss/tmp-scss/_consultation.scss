@@ -83,6 +83,7 @@
 
     @include adpt ($bmob-r) {
       padding: 30px 20px;
+      min-width: 0;
     }
   }
 

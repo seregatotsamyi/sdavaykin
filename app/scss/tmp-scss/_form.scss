@@ -11,6 +11,10 @@
     @include adpt ($tab-r) {
       flex-direction: column;
     }
+
+    @include adpt ($bmob-r) {
+      min-width: 0;
+    }
   }
 
   &__inputs {

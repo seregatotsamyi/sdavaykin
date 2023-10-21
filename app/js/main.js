@@ -214,6 +214,14 @@ $(function () {
   })
   //reviews
 
+  //question
+  $(document).on('click', '.questions__item', function () {
+    $(this).toggleClass('_active')
+    $(this).find('.questions__bottom').slideToggle()
+  })
+  
+  //question
+
   if (width < 577) {
     $('.js-advantages-slider').slick({
       autoplay: true,

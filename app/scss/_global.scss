@@ -82,10 +82,27 @@ body {
       box-shadow: 4px 4px 10px 0px rgba(107, 128, 137, 0.30);
     }
   }
-  &_3{
+
+  &_3 {
     background-color: $yellow;
     transition: box-shadow 0.3s;
     border-color: $yellow;
+    padding: 10px 30px 12px;
+
+    @include adpt ($bmob-r) {
+      padding: 10px 30px 9px;
+    }
+
+    &:hover {
+      box-shadow: 4px 4px 10px 0px rgba(107, 128, 137, 0.30);
+    }
+  }
+
+  &_4 {
+    background-color: $blue;
+    transition: box-shadow 0.3s;
+    border-color: $blue;
+    color: $white;
     padding: 10px 30px 12px;
 
     @include adpt ($bmob-r) {

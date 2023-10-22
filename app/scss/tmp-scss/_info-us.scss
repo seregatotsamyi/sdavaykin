@@ -1,0 +1,92 @@
+.info-us {
+  padding: 50px 0 120px;
+
+  @include adpt ($stab-r) {
+    padding: 50px 0;
+  }
+
+  @include adpt ($bmob-r) {
+    padding: 25px 0;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 auto 50px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__grid {
+    display: flex;
+    justify-content: space-between;
+
+    @include adpt ($stab-r) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 40px 30px;
+    flex: 1;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px 0px rgba(107, 128, 137, 0.30);
+
+    @include adpt ($mtab-r) {
+      padding: 30px 20px;
+    }
+
+    @include adpt ($bmob-r) {
+      padding: 20px;
+    }
+
+    &:not(:last-child) {
+      @include adpt ($stab-r) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &:nth-child(1) {
+      background-color: $greenLight;
+      z-index: 2;
+    }
+
+    &:nth-child(2) {
+      background-color: $yellowLight;
+      margin-left: -15px;
+      z-index: 1;
+      transform: translateY(70px);
+
+      @include adpt ($stab-r) {
+        margin-left: 0;
+        transform: translateY(0);
+      }
+    }
+
+    &:nth-child(3) {
+      background-color: $blueLight;
+      margin-left: -15px;
+
+      @include adpt ($stab-r) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+
+    @include adpt ($stab-r) {
+      margin-bottom: 10px;
+    }
+
+    @include adpt ($bmob-r) {
+      font-size: 18px;
+    }
+  }
+}

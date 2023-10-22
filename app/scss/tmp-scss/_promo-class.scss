@@ -1,0 +1,82 @@
+.promo-class {
+  padding-bottom: 50px;
+
+  @include adpt ($bmob-r) {
+    padding-bottom: 25px;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    @include adpt ($tab-r) {
+      margin-bottom: 16px;
+    }
+
+    @include adpt ($stab-r) {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 555px;
+    grid-gap: 30px;
+    align-items: center;
+
+    @include adpt ($mtab-r) {
+      grid-template-columns: 1fr 350px;
+    }
+
+    @include adpt ($stab-r) {
+      grid-template-columns: 1fr;
+      grid-gap: 64px;
+    }
+  }
+
+  &__text {
+    & p:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__img-wrap {
+    position: relative;
+    aspect-ratio: 555/255;
+    width: 100%;
+    height: auto;
+    margin-top: -16px;
+    border-radius: 30px;
+    border: 1px solid $grey;
+
+    @include adpt ($stab-r) {
+      order: -1;
+      max-width: 450px;
+      margin: 0 auto;
+    }
+
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 9px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: calc(100% - 152px);
+    width: 100%;
+    pointer-events: none;
+    height: auto;
+
+    @include adpt ($mtab-r) {
+      max-width: calc(100% - 102px);
+    }
+
+    @include adpt ($stab-r) {
+      max-width: calc(100% - 132px);
+    }
+
+    @include adpt ($bmob-r) {
+      max-width: calc(100% - 112px);
+      bottom: 6px;
+    }
+  }
+}

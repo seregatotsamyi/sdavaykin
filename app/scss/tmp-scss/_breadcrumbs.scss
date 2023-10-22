@@ -1,0 +1,30 @@
+.breadcrumbs {
+  margin-bottom: 55px;
+  margin-top: 20px;
+  @include adpt ($bmob-r){
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-bottom: 5px;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+
+      &::after {
+        content: " /";
+      }
+    }
+
+    & a {
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}

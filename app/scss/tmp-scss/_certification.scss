@@ -1,0 +1,223 @@
+.certification {
+  position: relative;
+  padding: 50px 0;
+
+  @include adpt ($bmob-r) {
+    padding: 25px 0;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &::after {
+    max-width: 608px;
+    aspect-ratio: 608/680;
+    background-image: url('../images/decor/certification1.svg');
+    top: -110px;
+    left: 0;
+
+    @include adpt ($big-r) {
+      background-image: url('../images/decor/certification1-mob.svg');
+      max-width: 211px;
+      aspect-ratio: 211/680;
+    }
+
+    @include adpt ($bmob-r) {
+      background-image: url('../images/decor/certification1-mob2.svg');
+      max-width: 114px;
+      align-self: 114/235;
+      top: -40px;
+    }
+  }
+
+  &::before {
+    max-width: 480px;
+    aspect-ratio: 480/750;
+    background-image: url('../images/decor/certification2.svg');
+    top: 120px;
+    right: 0;
+
+    @include adpt ($big-r) {
+      background-image: url('../images/decor/certification2-mob.svg');
+      aspect-ratio: 131/750;
+      max-width: 131px;
+    }
+
+    @include adpt ($bmob-r) {
+      max-width: 60px;
+      top: 60px;
+    }
+  }
+
+  &__wrap {
+    @include adpt ($tab-r) {
+      overflow: hidden;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin: 0 auto 50px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 30px;
+      text-align: left;
+    }
+  }
+
+  &__grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    grid-template-areas:
+      "a b c d"
+      "a e e f"
+      "g h i j";
+
+    @include adpt ($tab-r) {
+      display: block;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100%;
+    border-radius: 20px;
+    border: 1px solid $grey;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    @include adpt ($tab-r) {
+      background-color: $white;
+    }
+
+    &:hover {
+      background-color: $blue;
+      color: $white;
+      border-color: $blue;
+      box-shadow: 4px 4px 10px 0px rgba(107, 128, 137, 0.30);
+
+      & svg path {
+        stroke: $white;
+
+        &[fillColor] {
+          fill: $white;
+        }
+      }
+    }
+  }
+
+  &__item-wrap {
+    @include adpt ($tab-r) {
+      height: auto;
+      padding: 0 5px;
+    }
+
+    &:nth-child(1) {
+      grid-area: a;
+    }
+
+    &:nth-child(2) {
+      grid-area: b;
+      min-height: 154px;
+
+      @include adpt ($tab-r) {
+        min-height: 162px;
+      }
+    }
+
+    &:nth-child(3) {
+      grid-area: c;
+    }
+
+    &:nth-child(4) {
+      grid-area: d;
+    }
+
+    &:nth-child(5) {
+      grid-area: e;
+    }
+
+    &:nth-child(6) {
+      grid-area: f;
+      min-height: 154px;
+
+      @include adpt ($tab-r) {
+        min-height: 162px;
+      }
+    }
+
+    &:nth-child(7) {
+      grid-area: g;
+    }
+
+    &:nth-child(8) {
+      grid-area: h;
+    }
+
+    &:nth-child(9) {
+      grid-area: i;
+    }
+
+    &:nth-child(10) {
+      grid-area: j;
+    }
+
+
+  }
+
+  &__text {
+    text-align: right;
+
+    @include adpt ($bmob-r) {
+      font-size: 18px;
+    }
+  }
+
+  &__img {
+    & path {
+      stroke: $grey;
+      transition: stroke 0.3s, fill 0.3s;
+    }
+  }
+
+  &__arrow {
+    display: none;
+    position: relative;
+    z-index: 3;
+    justify-content: center;
+    margin-top: 10px;
+    align-items: center;
+
+    @include adpt ($tab-r) {
+      display: flex;
+    }
+  }
+
+  & .slick-list {
+    overflow: visible;
+    margin: 0 -5px;
+  }
+
+  & .slick-track {
+    display: flex;
+    align-items: stretch;
+  }
+}

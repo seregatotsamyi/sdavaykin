@@ -219,9 +219,34 @@ $(function () {
     $(this).toggleClass('_active')
     $(this).find('.questions__bottom').slideToggle()
   })
-  
+
   //question
 
+  //js-certification-slider
+  if (width < 1025) {
+    $('.js-certification-slider').slick({
+      autoplay: true,
+      slidesToShow: 3,
+      appendArrows: '.certification__arrow',
+      prevArrow: '<div class="slider-arrow slider-arrow_prev">      <img class="slider-arrow__img" src="images/icon/slider-right.svg" alt="slider-right.svg" width="30"        height="30">    </div>',
+      nextArrow: ' <div class="slider-arrow slider-arrow_next">      <img class="slider-arrow__img" src="images/icon/slider-right.svg" alt="slider-right.svg" width="30"        height="30">    </div>',
+      responsive: [{
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 577,
+          settings: {
+            slidesToShow: 1,
+
+          }
+        },
+      ]
+    })
+  }
+  //js-certification-slider
   if (width < 577) {
     $('.js-advantages-slider').slick({
       autoplay: true,

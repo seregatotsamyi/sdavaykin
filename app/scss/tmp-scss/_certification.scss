@@ -91,6 +91,35 @@
     @include adpt ($tab-r) {
       display: block;
     }
+
+    &._2 {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "a b b c"
+        "a d e f"
+        "g h h i"
+        "j j k i";
+
+      & .certification__item-wrap {
+
+        &:nth-child(7) {
+          min-height: 154px;
+
+          @include adpt ($tab-r) {
+            min-height: 162px;
+          }
+        }
+
+        &:nth-child(11) {
+          grid-area: k;
+          min-height: 154px;
+
+          @include adpt ($tab-r) {
+            min-height: 162px;
+          }
+        }
+      }
+    }
   }
 
   &__item {

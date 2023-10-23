@@ -1,203 +1,6 @@
-<!DOCTYPE html>
-<html lang="ru">
+@include('components/_head.html')
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="robots" content="noindex">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>School - разработка https://moskalevs.ru/</title>
-  <link rel="stylesheet" href="libs/slick.css">
-  <link rel="stylesheet" href="libs/jquery.formstyler.css">
-  <link rel="stylesheet" href="libs/jquery.formstyler.theme.css">
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
-
-<body class="body" id="body">
-
-<header class="header">
-
-  <div class="container">
-
-    <div class="header__inner">
-
-      <div class="header__logo-wrap">
-        <a class="header__logo logo" href="#">
-          <img class="logo__img" src="images/logo.svg" alt="logo" width="260" height="80">
-        </a>
-      </div>
-
-      <div class="header__right-wrap">
-
-        <div class="header__nav-wrap">
-          <nav class="header__nav menu">
-            <button class="header__burger header__burger_close  js-toggle-menu" type="button">
-              <img class="burger__img" src="images/icon/burger-menu-close.svg" alt="burger" width="40" height="40">
-              <span class="sr-only">Закрыть мобильное меню</span>
-            </button>
-            <ul class="menu__list">
-
-              <li class="menu__item">
-
-                <div class="menu__item-top">
-
-                  <a class="menu__link _arrow" href="#">
-                    Классы
-                  </a>
-
-                  <div class="menu__sublist-wrap">
-                    <ul class="menu__sublist">
-                      <li class="menu__subitem">
-                        <a class="menu__sublink" href="#" data-text="1 класс">
-                          1 класс
-                        </a>
-                      </li>
-                      <li class="menu__subitem">
-                        <a class="menu__sublink" href="#" data-text="2 класс">
-                          2 класс
-                        </a>
-                      </li>
-                      <li class="menu__subitem">
-                        <a class="menu__sublink" href="#" data-text="3 класс">
-                          3 класс
-                        </a>
-                      </li>
-                      <li class="menu__subitem">
-                        <a class="menu__sublink" href="#" data-text="4 класс">
-                          4 класс
-                        </a>
-                      </li>
-                      <li class="menu__subitem">
-                        <a class="menu__sublink" href="#" data-text="5 класс">
-                          5 класс
-                        </a>
-                      </li>
-                      <li class="menu__subitem">
-                        <a class="menu__sublink" href="#" data-text="6 класс">
-                          6 класс
-                        </a>
-                      </li>
-                      <li class="menu__subitem">
-                        <a class="menu__sublink" href="#" data-text="7 класс">
-                          7 класс
-                        </a>
-                      </li>
-                      <li class="menu__subitem">
-                        <a class="menu__sublink" href="#" data-text="8 класс">
-                          8 класс
-                        </a>
-                      </li>
-
-                      <li class="menu__subitem">
-                        <a class="menu__sublink" href="#" data-text="9 класс">
-                          9 класс
-                        </a>
-                      </li>
-                      <li class="menu__subitem">
-                        <a class="menu__sublink" href="#" data-text="10 класс">
-                          10 класс
-                        </a>
-                      </li>
-                      <li class="menu__subitem">
-                        <a class="menu__sublink" href="#" data-text="11 класс">
-                          11 класс
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-              </li>
-
-              <li class="menu__item">
-
-                <div class="menu__item-top">
-                  <a class="menu__link" href="#">
-                    Контакты
-
-                  </a>
-                </div>
-              </li>
-
-              <li class="menu__item">
-
-                <div class="menu__item-top">
-
-                  <a class="menu__link _arrow" href="#">
-                    Родителям
-                  </a>
-
-                  <div class="menu__sublist-wrap _second">
-                    <ul class="menu__sublist">
-                      <li class="menu__subitem">
-                        <a class="menu__sublink" href="#" data-text=" Документы и лицензии">
-                          Документы и лицензии
-
-                        </a>
-                      </li>
-                      <li class="menu__subitem">
-                        <a class="menu__sublink" href="#" data-text="Вопрос-ответ">
-                          Вопрос-ответ
-
-                        </a>
-                      </li>
-                      <li class="menu__subitem">
-                        <a class="menu__sublink" href="#" data-text="Блог">
-                          Блог
-                        </a>
-                      </li>
-                      <li class="menu__subitem">
-                        <a class="menu__sublink" href="#" data-text="Новости">
-                          Новости
-                        </a>
-                      </li>
-                      <li class="menu__subitem">
-                        <a class="menu__sublink" href="#" data-text="Информация о СО">
-                          Информация о СО
-                        </a>
-                      </li>
-                      <li class="menu__subitem">
-                        <a class="menu__sublink" href="#" data-text="ЕГЭ/ОГЭ">
-                          ЕГЭ/ОГЭ
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-
-                </div>
-
-              </li>
-            </ul>
-            <a class="menu__btn btn popup--link" href="#feedback">
-              Отправить заявку
-            </a>
-          </nav>
-        </div>
-
-        <div class="header__phone">
-          <a class="header__phone-link text-bold" href="tel:89005555555">
-            8 900 555 55 55
-          </a>
-          <span class="header__schedule">
-            c 8:00 до 20:00
-          </span>
-        </div>
-
-        <button class="header__burger  js-toggle-menu" type="button">
-          <img class="burger__img" src="images/icon/burger-menu.svg" alt="burger" width="40" height="40">
-          <span class="sr-only">Открыть мобильное меню</span>
-        </button>
-
-        <a class="header__btn btn popup--link" href="#feedback">
-          Отправить заявку
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</header>
+@include('components/_header.html')
 
 <main class="main">
 
@@ -213,7 +16,7 @@
         </li>
         <li class="breadcrumbs__item">
           <span>
-            2 класс
+            5 класс
           </span>
         </li>
       </ul>
@@ -225,7 +28,7 @@
   <section class="promo-class">
     <div class="container">
       <div class="promo-class__title _h1">
-        Аттестация во 2 классе
+        Аттестация в 5 классе
       </div>
       <div class="promo-class__inner">
         <div class="promo-class__text">
@@ -234,8 +37,6 @@
             адаптацию к учебному процессу. Нет психологической нагрузки. Программа обучения не сложная, родители могут
             самостоятельно объяснить/научить. Можно написать, что многодетные семьи выбирают удалённый формат обучения
             для младших детей.
-
-
           </p>
           <p>
             Для других классов: почему выбирают такой тип обучения в этом классе: трудности в обычной
@@ -243,7 +44,7 @@
           </p>
         </div>
         <div class="promo-class__img-wrap">
-          <img class="promo-class__img" src="images/cat/class2.svg" alt="cat" width="400" height="280">
+          <img class="promo-class__img" src="images/cat/class5.svg" alt="cat" width="400" height="280">
         </div>
       </div>
     </div>
@@ -289,13 +90,13 @@
 
     <div class="container">
       <div class="certification__title _h2">
-        По каким предметам сдают итоговую аттестацию во 2 классе
+        По каким предметам сдают итоговую аттестацию в 5 классе
       </div>
     </div>
 
     <div class="certification__wrap">
       <div class="container">
-        <ul class="certification__grid _2 slider js-certification-slider">
+        <ul class="certification__grid _4 slider js-certification-slider">
           <li class="certification__item-wrap">
             <div class="certification__item">
               <svg class="certification__img" width="60" height="61" viewBox="0 0 60 61" fill="none"
@@ -312,30 +113,64 @@
           </li>
           <li class="certification__item-wrap">
             <div class="certification__item">
-              <svg class="certification__img" width="60" height="60" viewBox="0 0 60 60" fill="none"
+              <svg class="certification__img" width="60" height="61" viewBox="0 0 60 61" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
-                  d="M19.302 49.3161H8.65312H2.89336C1.78008 49.3161 0.878906 48.4149 0.878906 47.3016V18.6106C0.878906 17.4973 1.78008 16.5962 2.89336 16.5962H3.98789M56.0121 16.5958H57.1066C58.2199 16.5958 59.1211 17.497 59.1211 18.6103V47.3013C59.1211 48.4146 58.2199 49.3158 57.1066 49.3158H35.066C34.8918 49.6755 34.6585 50.0035 34.3758 50.2861C33.7289 50.9329 32.8359 51.3325 31.8492 51.3325H28.8141"
+                  d="M24.4249 0.999873H43.2319C43.4825 0.999873 43.7228 1.09942 43.9 1.27662C44.0772 1.45382 44.1768 1.69415 44.1768 1.94475V3.02345C44.1768 4.06719 43.3308 4.91321 42.287 4.91321H18.673C17.6292 4.91321 16.7832 4.06719 16.7832 3.02345V1.94475C16.7832 1.69415 16.8828 1.45382 17.06 1.27662C17.2372 1.09942 17.4775 0.999873 17.7281 0.999873H24.4249Z"
+                  stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M19.7188 4.9132L20.6971 8.82654" stroke="white" stroke-miterlimit="10" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M26.0781 4.9132L27.0564 8.82654" stroke="white" stroke-miterlimit="10" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M40.2637 8.82666L41.242 4.91333" stroke="white" stroke-miterlimit="10" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M33.9043 8.82666L34.8827 4.91333" stroke="white" stroke-miterlimit="10" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M18.7399 47.9604C17.6592 47.9604 16.7832 48.8365 16.7832 49.9171C16.7832 50.9978 17.6592 51.8738 18.7399 51.8738H42.2202C43.3009 51.8738 44.1769 50.9978 44.1769 49.9171C44.1769 48.8365 43.3009 47.9604 42.2202 47.9604H18.7399Z"
                   stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                 <path
-                  d="M56.0121 31.5981V42.9595C56.0121 44.681 54.6164 46.0767 52.8949 46.0767H28.8141M3.98788 31.5981V42.9595C3.98788 44.681 5.38359 46.0767 7.10507 46.0767H19.3019"
+                  d="M19.7184 40.1337C18.6379 40.1337 17.7617 41.0097 17.7617 42.0903C17.7617 43.171 18.6379 44.047 19.7184 44.047H41.242C42.3227 44.047 43.1987 43.171 43.1987 42.0903C43.1987 41.0097 42.3227 40.1337 41.242 40.1337H19.7184Z"
                   stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                 <path
-                  d="M28.8141 45.745V54.1966C28.8141 55.5864 27.2285 56.3822 26.1141 55.5525L24.0574 54.0197L22.0008 55.5525C20.8863 56.3822 19.302 55.5864 19.302 54.1966V43.0861"
+                  d="M41.2418 44.0471C40.1612 44.0471 39.2852 44.9231 39.2852 46.0037C39.2852 47.0844 40.1612 47.9604 41.2418 47.9604"
                   stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                 <path
-                  d="M10.4215 11.1653L6.82382 10.1598C5.39882 9.76137 3.98788 10.8325 3.98788 12.3125V35.8473C3.98788 37.5957 5.15273 39.1297 6.83671 39.6008L30 46.0766L53.1633 39.6008C54.8473 39.1297 56.0121 37.5957 56.0121 35.8473V12.3125C56.0121 10.8325 54.6012 9.76137 53.1762 10.1598L49.5797 11.1653"
+                  d="M19.7188 47.9604C20.7993 47.9604 21.6755 47.0844 21.6755 46.0037C21.6755 44.9231 20.7993 44.0471 19.7188 44.0471"
                   stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                 <path
-                  d="M30 16.6395L19.3711 8.74342L13.6816 4.51646C12.334 3.51568 10.4215 4.47779 10.4215 6.15592V29.7305C10.4214 30.2896 10.5521 30.841 10.8032 31.3406C11.0543 31.8401 11.4188 32.274 11.8676 32.6075L30 46.077M30 16.6395V46.077M30 16.6395L46.3195 4.51646C47.666 3.51568 49.5797 4.47779 49.5797 6.15592V28.5516V29.7305C49.5797 30.8637 49.043 31.9313 48.1324 32.6075L30 46.077"
+                  d="M28.3382 59.7006H43.2319C43.4825 59.7006 43.7228 59.601 43.9 59.4238C44.0772 59.2466 44.1768 59.0063 44.1768 58.7557V53.7635C44.1768 52.7199 43.3308 51.8738 42.287 51.8738H18.673C17.6292 51.8738 16.7832 52.7199 16.7832 53.7635V58.7557C16.7832 59.0063 16.8828 59.2466 17.06 59.4238C17.2372 59.601 17.4775 59.7006 17.7281 59.7006H28.3382Z"
                   stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M17.7626 16.6533C17.7626 18.2744 16.4487 19.5884 14.8276 19.5884C13.2067 19.5884 11.8926 18.2744 11.8926 16.6533C11.8926 15.0324 13.2067 13.7183 14.8276 13.7183C16.4487 13.7183 17.7626 15.0324 17.7626 16.6533Z"
+                  stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M49.0693 16.6533C49.0693 18.2744 47.7552 19.5884 46.1341 19.5884C44.5132 19.5884 43.1992 18.2744 43.1992 16.6533C43.1992 15.0324 44.5132 13.7183 46.1341 13.7183C47.7552 13.7183 49.0693 15.0324 49.0693 16.6533Z"
+                  stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M22.0845 13.7183C22.4615 14.6508 22.6547 15.6475 22.6535 16.6533C22.6535 20.9759 19.1494 24.4801 14.8268 24.4801C10.5042 24.4801 7 20.9759 7 16.6533C7 12.3307 10.5042 8.82653 14.8268 8.82653H46.1337C50.4564 8.82653 53.9605 12.3307 53.9605 16.6533C53.9605 20.9759 50.4564 24.4801 46.1337 24.4801C41.8112 24.4801 38.307 20.9759 38.307 16.6533C38.3058 15.6475 38.499 14.6508 38.876 13.7183"
+                  stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M14.8262 13.7184H46.1331" stroke="white" stroke-miterlimit="10" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M20.6973 25.4586V40.1338" stroke="white" stroke-miterlimit="10" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M40.2637 25.4586V40.1338" stroke="white" stroke-miterlimit="10" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M18.7439 23.4283C18.743 23.4529 18.7402 23.477 18.7402 23.5018C18.7402 24.5824 19.6163 25.4585 20.6968 25.4585H40.2638C41.3443 25.4585 42.2205 24.5824 42.2205 23.5018C42.2205 23.477 42.2176 23.4529 42.2167 23.4283"
+                  stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M40.0252 21.5452H20.9336" stroke="white" stroke-miterlimit="10" stroke-linecap="round"
+                  stroke-linejoin="round" />
               </svg>
 
+
               <div class="certification__text text-bold">
-                Литературное чтение на родном языке (русском)
+                Всеобщая история. История России
+
               </div>
             </div>
           </li>
+
           <li class="certification__item-wrap">
             <div class="certification__item">
               <svg class="certification__img" width="60" height="60" viewBox="0 0 60 60" fill="none"
@@ -367,7 +202,34 @@
               </svg>
 
               <div class="certification__text text-bold">
-                Литературное чтение
+                Литература
+              </div>
+            </div>
+          </li>
+          <li class="certification__item-wrap">
+            <div class="certification__item">
+              <svg class="certification__img" width="60" height="60" viewBox="0 0 60 60" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.302 49.3161H8.65312H2.89336C1.78008 49.3161 0.878906 48.4149 0.878906 47.3016V18.6106C0.878906 17.4973 1.78008 16.5962 2.89336 16.5962H3.98789M56.0121 16.5958H57.1066C58.2199 16.5958 59.1211 17.497 59.1211 18.6103V47.3013C59.1211 48.4146 58.2199 49.3158 57.1066 49.3158H35.066C34.8918 49.6755 34.6585 50.0035 34.3758 50.2861C33.7289 50.9329 32.8359 51.3325 31.8492 51.3325H28.8141"
+                  stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M56.0121 31.5981V42.9595C56.0121 44.681 54.6164 46.0767 52.8949 46.0767H28.8141M3.98788 31.5981V42.9595C3.98788 44.681 5.38359 46.0767 7.10507 46.0767H19.3019"
+                  stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M28.8141 45.745V54.1966C28.8141 55.5864 27.2285 56.3822 26.1141 55.5525L24.0574 54.0197L22.0008 55.5525C20.8863 56.3822 19.302 55.5864 19.302 54.1966V43.0861"
+                  stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M10.4215 11.1653L6.82382 10.1598C5.39882 9.76137 3.98788 10.8325 3.98788 12.3125V35.8473C3.98788 37.5957 5.15273 39.1297 6.83671 39.6008L30 46.0766L53.1633 39.6008C54.8473 39.1297 56.0121 37.5957 56.0121 35.8473V12.3125C56.0121 10.8325 54.6012 9.76137 53.1762 10.1598L49.5797 11.1653"
+                  stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M30 16.6395L19.3711 8.74342L13.6816 4.51646C12.334 3.51568 10.4215 4.47779 10.4215 6.15592V29.7305C10.4214 30.2896 10.5521 30.841 10.8032 31.3406C11.0543 31.8401 11.4188 32.274 11.8676 32.6075L30 46.077M30 16.6395V46.077M30 16.6395L46.3195 4.51646C47.666 3.51568 49.5797 4.47779 49.5797 6.15592V28.5516V29.7305C49.5797 30.8637 49.043 31.9313 48.1324 32.6075L30 46.077"
+                  stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+              <div class="certification__text text-bold">
+                Родная литература (русская)
+
               </div>
             </div>
           </li>
@@ -450,7 +312,7 @@
               </svg>
 
               <div class="certification__text text-bold">
-                Окружающий мир
+                География
               </div>
             </div>
           </li>
@@ -625,7 +487,62 @@
               </div>
             </div>
           </li>
-       
+          <li class="certification__item-wrap">
+            <div class="certification__item">
+              <svg class="certification__img" width="60" height="60" viewBox="0 0 60 60" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_711_2899)">
+                  <path
+                    d="M27.1309 15.5505L29.9157 4.60014C30.2943 3.11131 29.3763 1.60186 27.8802 1.25311C26.5731 0.948411 25.2376 1.63443 24.7239 2.87432L17.3909 20.5726C16.838 21.9073 16.5533 23.3378 16.5533 24.7825V31.4428C16.5533 33.2691 16.1872 35.0769 15.4766 36.7594C14.766 38.4418 13.7253 39.9647 12.416 41.2381"
+                    stroke="#67676A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M22.463 26.8875L25.0942 17.7086C25.442 16.4952 26.6395 15.731 27.8866 15.9266C29.1036 16.1175 30.0005 17.166 30.0005 18.3979V38.9422C30.0005 44.1469 27.2687 48.9696 22.8048 51.6458M47.5926 41.2451C46.2812 39.9715 45.2388 38.4478 44.5269 36.764C43.815 35.0803 43.4482 33.2709 43.4482 31.4429V24.7826C43.4482 23.3379 43.1636 21.9074 42.6106 20.5728L41.3748 17.5901L35.2775 2.87432C34.7638 1.63443 33.4283 0.948411 32.1212 1.25311C30.6251 1.60186 29.7071 3.11131 30.0858 4.60014L32.8705 15.5505M18.5005 59.5C14.4359 59.8188 2.40963 55 1.50051 50C0.591383 45 11.0185 39.9104 11.0185 39.9104L24.1625 53.0546C24.1625 53.0546 22.565 59.1812 18.5005 59.5Z"
+                    stroke="#67676A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M37.5375 26.8875L34.9063 17.7086C34.5584 16.4952 33.361 15.731 32.1139 15.9266C30.8969 16.1175 30 17.166 30 18.3979V38.9422C30 44.1468 32.7318 48.9696 37.1957 51.6458M42.5 59.5C46.5 60.2273 58 54.5 58.8285 49.7569C59.657 45.0139 48.982 39.9104 48.982 39.9104L35.8379 53.0546C35.8379 53.0546 38.5 58.7727 42.5 59.5Z"
+                    stroke="#67676A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_711_2899">
+                    <rect width="60" height="60" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+
+
+              <div class="certification__text text-bold">
+                ОДНКНР
+              </div>
+            </div>
+          </li>
+          <li class="certification__item-wrap">
+            <div class="certification__item">
+              
+              <svg class="certification__img" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.3707 11.9812C10.6519 6.97234 10.5546 3.21368 10.5512 3.03931C10.5279 1.90201 11.4311 0.961344 12.5684 0.938141C12.5827 0.937789 12.597 0.937675 12.6111 0.937675C13.7292 0.937675 14.6466 1.83228 14.6694 2.95529C14.6704 2.99197 14.7971 7.14121 16.8916 12.3163C19.6669 19.1735 24.4153 24.5183 31.0052 28.2024C35.118 30.5016 38.6487 33.4396 41.4994 36.9349C43.7809 39.7321 45.63 42.8861 46.9957 46.3094C49.3258 52.1499 49.4452 56.7673 49.449 56.961C49.4724 58.0983 48.5692 59.0389 47.4319 59.0621C47.4176 59.0624 47.4034 59.0625 47.3891 59.0625C46.2724 59.0625 45.3559 58.17 45.331 57.049C45.3289 56.9754 45.1949 52.8386 43.1086 47.6839C40.3335 40.8268 35.5851 35.482 28.9952 31.7979C24.8824 29.4986 21.3515 26.5605 18.5008 23.0653C16.5703 20.6982 13.6511 14.8061 12.3707 11.9812Z" stroke="#67676A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M35.2852 6.52045H44.8521" stroke="#67676A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15.1484 6.52045H29.8251" stroke="#67676A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M35.2849 6.52045C35.2849 5.01249 34.0625 3.79011 32.5546 3.79011C31.0466 3.79011 29.8242 5.01249 29.8242 6.52045C29.8242 8.02841 31.0466 9.25079 32.5546 9.25079C34.0625 9.25079 35.2849 8.02841 35.2849 6.52045Z" stroke="#67676A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M27.1738 14.9811H41.9998" stroke="#67676A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.5 14.9811H21.7134" stroke="#67676A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M27.1736 14.9811C27.1736 13.4731 25.9512 12.2507 24.4432 12.2507C22.9354 12.2507 21.7129 13.4731 21.7129 14.9811C21.7129 16.489 22.9354 17.7114 24.4432 17.7114C25.9512 17.7114 27.1736 16.489 27.1736 14.9811Z" stroke="#67676A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M32.8256 45.0183H18.5" stroke="#67676A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M42.0005 45.0183H38.2871" stroke="#67676A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M32.8262 45.0183C32.8262 43.5103 34.0487 42.288 35.5565 42.288C37.0645 42.288 38.287 43.5103 38.287 45.0183C38.287 46.5263 37.0645 47.7487 35.5565 47.7487C34.0487 47.7487 32.8262 46.5263 32.8262 45.0183Z" stroke="#67676A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M23.5619 53.4789H15.1484" stroke="#67676A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M44.8516 53.4789H29.0215" stroke="#67676A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M23.5625 53.4789C23.5625 51.9709 24.785 50.7485 26.2928 50.7485C27.8008 50.7485 29.0232 51.9709 29.0232 53.4789C29.0232 54.9868 27.8008 56.2092 26.2928 56.2092C24.785 56.2092 23.5625 54.9868 23.5625 53.4789Z" stroke="#67676A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M30.0003 32.3829C23.9313 36.0391 19.5234 41.1809 16.8915 47.6838C14.7971 52.8591 14.6704 57.0083 14.6693 57.0496C14.6413 58.1689 13.7251 59.0601 12.6111 59.0601C12.5952 59.0601 12.5795 59.0599 12.5637 59.0595C11.4283 59.0338 10.5279 58.0963 10.5512 56.961C10.5546 56.7866 11.9494 49.7595 13.6685 44.7502C14.9489 41.9249 16.5701 39.3021 18.5008 36.9348C20.6557 34.293 23.1996 31.9701 26.089 30.0001" stroke="#67676A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M30 27.6172C36.0688 23.9611 40.4766 18.8192 43.1084 12.3163C45.2028 7.14108 45.3296 2.99183 45.3307 2.95058C45.3587 1.83121 46.275 0.940002 47.3889 0.940002C47.4048 0.940002 47.4205 0.940235 47.4364 0.940586C48.5717 0.966367 49.4719 1.90387 49.4488 3.03929C49.4449 3.23289 49.3254 7.85029 46.9955 13.6908C45.6298 17.1141 43.7806 20.268 41.4992 23.0653C41.3002 23.3092 38.6694 26.0965 38.4638 26.3349C37.0615 27.6649 35.5413 28.8887 33.9111 30.0001" stroke="#67676A" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                
+
+              <div class="certification__text text-bold">
+                Биология
+              </div>
+            </div>
+          </li>
+
         </ul>
         <div class="certification__arrow"></div>
       </div>
@@ -662,10 +579,10 @@
           <div class="price__left">
             <div class="price__top">
               <div class="price__num text-bold">
-                2 класс
+                5 класс
               </div>
               <div class="price__price _h3">
-                13 000 ₽
+                15 000 ₽
               </div>
               <a class="price__btn btn" href="#">
                 Начать регистрацию
@@ -704,523 +621,16 @@
     </div>
   </section>
 
-  <section class="stages">
-  <div class="container">
-    <div class="stages__title _h2">
-      Этапы прохождения промежуточной аттестации
-    </div>
-    <div class="stages__inner">
-      <img class="stages__img" src="images/decor/stages.svg" alt="stages" width="824" height="290">
-      <div class="stages__item _1">
-        <div class="stages__number">
-          1
-        </div>
-        <div class="stages__subtitle text-bold">
-          Регистрация на портале
-        </div>
-        <div class="stages__text">
-          После подачи заявки мы отправим список нужных нам документов и анкету, куда следует внести данные ребёнка
-        </div>
-      </div>
-      <div class="stages__item _2">
-        <div class="stages__number">
-          2
-        </div>
-        <div class="stages__subtitle text-bold">
-          Оформление и прикрепление к школе
-        </div>
-        <div class="stages__text">
-          Получив заполненную анкету и сканы документов, мы зачисляем ученика в аккредитованную школу-партнёр
-        </div>
-      </div>
-      <div class="stages__item _3">
-        <div class="stages__number">
-          3
-        </div>
-        <div class="stages__subtitle text-bold">
-          Обучение и тренинги
-        </div>
-        <div class="stages__text">
-          Ученику и родителям предоставляется доступ к учебным материалам платформы и прохождению аттестаций
-        </div>
-      </div>
-      <div class="stages__item _4">
-        <div class="stages__number">
-          4
-        </div>
-        <div class="stages__subtitle text-bold">
-          Дистанционная аттестация
-        </div>
-        <div class="stages__text">
-          После успешной аттестации выдаётся табель с оценками подтверждающий прохождение курса. Данные вносятся
-          в единый реестр. Вы можете продолжить обучение в любой школе. В том числе и муниципальной
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  @include('components/_stages.html')
 
-  <section class="questions">
-  <div class="container">
-    <div class="questions__title _h2">
-      Часто задаваемые вопросы
-    </div>
-    <div class="questions__inner">
-      <img class="questions__img" src="images/decor/questions.svg" alt="questions" width="360" height="440">
-      <div class="questions__content">
-        <ul class="questions__list">
-          <li class="questions__item">
-            <div class="questions__top">
-              <img class="questions__img-btn" src="images/icon/plus.svg" alt="plus" width="40" height="40">
-              <div class="questions__text-top">
-                Как ученик поймёт, какие темы его ждут на аттестации?
-              </div>
-            </div>
-            <div class="questions__bottom">
-              Вопросы и темы, которые ожидаются в тестах на аттестацию, присутствуют в тренировочных тестах. Проходя
-              их, ребёнок готовится к испытанию, можно сказать — практически. Кроме того, об особенностях предстоящих
-              тестирований по разным предметам ученика информирует его куратор.
-            </div>
-          </li>
-          <li class="questions__item">
-            <div class="questions__top">
-              <img class="questions__img-btn" src="images/icon/plus.svg" alt="plus" width="40" height="40">
-              <div class="questions__text-top">
-                Существуют ли временные рамки прохождения тестов исходя из поры учебного года?
-              </div>
-            </div>
-            <div class="questions__bottom">
-              Дистанционные аттестации на портале «Сдавайкин» можно проходить когда угодно, кроме каникул (до 31 мая).
-              Сдать экзамен ребёнок может в произвольное время. На аттестацию по отдельному предмету даётся
-              от 6 до 8 ч, чего вполне достаточно для комфортного тестирования.
-            </div>
-          </li>
-          <li class="questions__item">
-            <div class="questions__top">
-              <img class="questions__img-btn" src="images/icon/plus.svg" alt="plus" width="40" height="40">
-              <div class="questions__text-top">
-                Ребёнок на семейном образовании, сдаёт аттестации в ближайшей школе, можно ли экзаменоваться у вас?
+  @include('components/_questions.html')
 
-              </div>
-            </div>
-            <div class="questions__bottom">
-              Разумеется. Для этого нужно пройти регистрацию и прислать нам копии документов ученика. Он будет
-              прикреплён к СОШ «Пенаты» (г. Москва). Здесь (на каком-то этапе) он будет сдавать ОГЭ/ЕГЭ в очной форме,
-              а на нашем портале — промежуточные аттестации в дистанционном режиме.
-            </div>
-          </li>
-          <li class="questions__item">
-            <div class="questions__top">
-              <img class="questions__img-btn" src="images/icon/plus.svg" alt="plus" width="40" height="40">
-              <div class="questions__text-top">
-                В нашей школе негативно относятся к переводу ребёнка на семейную форму, что делать?
-              </div>
-            </div>
-            <div class="questions__bottom">
-              Запретить перевод ученика на семейное образование в школе не имеют права: здесь все зависит от позиции
-              родителей. А сервис «Сдавайкин» сделает все, чтобы ваш ребёнок получил хорошие знания!
-            </div>
-          </li>
-          <li class="questions__item">
-            <div class="questions__top">
-              <img class="questions__img-btn" src="images/icon/plus.svg" alt="plus" width="40" height="40">
-              <div class="questions__text-top">
-                Можно ли как-то удостовериться, что ребёнок «потянет» самостоятельную подготовку?
-              </div>
-            </div>
-            <div class="questions__bottom">
-              После регистрации мы отправим программу по соответствующему классу и предмету. Эта информация поможет
-              понять — к чему следует стремиться. Также мы предоставляем задания, идентичные тем, что ожидаются
-              в аттестационных тестах. По ответам на них вашего ребёнка можно сделать определённые выводы.
-            </div>
-          </li>
-        </ul>
-        <a class="questions__link btn btn_4" href="#">
-          Открыть все вопросы
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <section class="call _yellow">
-  <div class="container">
-    <div class="call__title _h2">
-      Заинтересовало? <br>
-      Тогда регистрируйтесь!
-    </div>
-    <form class="call__inner">
-      <div class="call__text">
-        После заполнения и отправки формы с вами свяжется менеджер для личного разговора. Уточнив детали, мы пришлём
-        логин и пароль для доступа в личный кабинет. Здесь можно задать вопрос консультанту, а в соответствующих
-        разделах портала «Сдавайкин» вы найдёте перечень документов, необходимых для зачисления.
-      </div>
-      <div class="form">
-        <div class="form__row">
-          <div class="form__inputs">
-            <div class="input">
-              <input class="input__input" type="text" placeholder="Ваше имя" name="name">
-            </div>
-          </div>
-          <div class="form__inputs">
-            <div class="input">
-              <input class="input__input tel" type="tel" placeholder="Номер телефона" name="phone">
-            </div>
-          </div>
-          <div class="form__inputs">
-            <div class="input">
-              <select class="input__input _select js-select" name="connection" data-placeholder="Как с вами связаться?">
-                <option></option>
-                <option value="phone">Телефон </option>
-                <option value="WhatsApp ">WhatsApp </option>
-                <option value="Telegram ">Telegram </option>
-              </select>
-            </div>
-          </div>
-          <button class="form__btn btn btn_4" type="submit">
-            Отправить
-          </button>
-        </div>
-
-      </div>
-      <div class="form__policy call__policy">
-        <span>Нажимая кнопку, вы соглашаетесь </span><a href="#">на&nbsp;обработку своих персональных данных</a>
-      </div>
-    </form>
-  </div>
-</section>
+  @include('components/_call_y.html')
 
 </main>
 
-<footer class="footer">
+@include('components/_footer.html')
+@include('components/_popup.html')
+@include('components/_classes.html')
 
-  <div class="footer__inner-wrap">
-
-    <div class="container">
-
-      <picture>
-        <source media="(max-width: 768px)" srcset="images/decor/footer-bg-mob.svg">
-        <source srcset="images/decor/footer-bg.svg">
-        <img class="footer__bg" src="images/decor/footer-bg.svg" alt="footer-bg.svg">
-      </picture>
-
-      <div class="footer__inner">
-        <div class="footer__left">
-          <a class="footer__logo logo" href="#">
-            <img class="logo__img" src="images/logo-2.svg" alt="logo" width="250" height="71">
-          </a>
-          <div class="footer__text-block">
-            <p>
-              ООО «Сдавайкин»
-            </p>
-            <p>
-              ИНН 00000000
-            </p>
-            <p>
-              ОГРН 000000000
-            </p>
-            <p>
-              Возрастной рейтинг 6+
-            </p>
-          </div>
-          <a class="footer__policy" href="#" data-text="Политика конфиденциальности">
-            Политика конфиденциальности
-          </a>
-        </div>
-        <div class="footer__grid">
-          <div class="footer__list-wrap _a">
-            <div class="footer__title text-bold">
-              Классы
-            </div>
-            <ul class="footer__list _two-column">
-              <li class="footer__item">
-                <a class="footer__link" href="#" data-text="1 класс">
-                  1 класс
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#" data-text="2 класс">
-                  2 класс
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#" data-text="3 класс">
-                  3 класс
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#" data-text="4 класс">
-                  4 класс
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#" data-text="5 класс">
-                  5 класс
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#" data-text="6 класс">
-                  6 класс
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#" data-text="7 класс">
-                  7 класс
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#" data-text="8 класс">
-                  8 класс
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#" data-text="9 класс">
-                  9 класс
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#" data-text="10 класс">
-                  10 класс
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#" data-text="11 класс">
-                  11 класс
-                </a>
-              </li>
-
-            </ul>
-          </div>
-          <div class="footer__list-wrap _b">
-            <div class="footer__title text-bold">
-              Главная
-            </div>
-            <ul class="footer__list">
-              <li class="footer__item">
-                <a class="footer__link" href="#" data-text="Документы и лицензии">
-                  Документы и лицензии
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#" data-text="Вопрос-ответ">
-                  Вопрос-ответ
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#" data-text="Блог">
-                  Блог
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#" data-text="Новости">
-                  Новости
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#" data-text="Информация о СО">
-                  Информация о СО
-                </a>
-              </li>
-              <li class="footer__item">
-                <a class="footer__link" href="#" data-text="ЕГЭ/ОГЭ">
-                  ЕГЭ/ОГЭ
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer__list-wrap _c">
-            <div class="footer__title text-bold">
-              Контакты
-            </div>
-            <ul class="footer__links">
-              <li class="footer__links-item">
-                <a class="footer__links-link" href="tel:89005555555" data-text="8 900 555 55 55">
-                  8 900 555 55 55
-                </a>
-              </li>
-              <li class="footer__links-item">
-                <a class="footer__links-link" href="mailto:sdavaikin@mail.ru" data-text="sdavaikin@mail.ru">
-                  sdavaikin@mail.ru
-                </a>
-              </li>
-            </ul>
-            <div class="footer__social social">
-              <ul class="social__list">
-                <li class="social__item">
-                  <a class="social__link" href="#">
-                    <img class="social__img" src="images/social/tg.svg" alt="social" width="26" height="21">
-                  </a>
-                </li>
-                <li class="social__item">
-                  <a class="social__link" href="#">
-                    <img class="social__img" src="images/social/wa.svg" alt="social" width="26" height="21">
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer__list-wrap _d">
-            <div class="footer__title text-bold">
-              Школа-партнер
-            </div>
-            <p class="footer__text">
-              ОАНО СОШ "Пенаты"
-            </p>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</footer>
-<div id="feedback" class="popup">
-  <div class="popup__body">
-    <div class="popup__content ">
-      <a href="#" class="popup__close popup--close">
-
-        <svg class="popup__close-img" width="40" height="40" viewBox="0 0 40 40" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <g >
-            <path d="M24.9497 15.0503L15.0502 24.9498"  fill="white" stroke="white" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" />
-            <path d="M15.0503 15.0503L24.9498 24.9498"  fill="white" stroke="white" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </g>
-        
-        </svg>
-
-      </a>
-
-      <form class="popup__inner">
-        <div class="popup__title">
-          Заполните форму и с вами свяжется менеджер.
-        </div>
-        <div class="popup__text">
-          Вы сможете задать любой вопрос о сдаче аттестации в «Сдавайкин». А также получить логин и пароль для доступа
-          в личный кабинет и начать регистрацию ребёнка на сервисе.
-        </div>
-        <div class="form">
-          <div class="form__row">
-            <div class="form__inputs">
-              <div class="input">
-                <input class="input__input" type="text" placeholder="Ваше имя" name="name">
-              </div>
-            </div>
-          </div>
-          <div class="form__row">
-            <div class="form__inputs">
-              <div class="input">
-                <input class="input__input tel" type="tel" placeholder="Номер телефона" name="phone">
-              </div>
-            </div>
-          </div>
-          <div class="form__row">
-            <div class="form__inputs">
-              <div class="input">
-                <select class="input__input _select js-select" name="connection"
-                  data-placeholder="Как с вами связаться?">
-                  <option></option>
-                  <option value="phone">Телефон </option>
-                  <option value="WhatsApp ">WhatsApp </option>
-                  <option value="Telegram ">Telegram </option>
-                </select>
-              </div>
-            </div>
-            <button class="form__btn btn btn_3" type="submit">
-              Отправить
-            </button>
-
-
-          </div>
-
-        </div>
-      </form>
-
-    </div>
-  </div>
-</div>
-<div id="classes" class="popup">
-  <div class="popup__body">
-    <div class="popup__content _class">
-      <a href="#" class="popup__close popup--close">
-
-        <svg class="popup__close-img" width="40" height="40" viewBox="0 0 40 40" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <g>
-            <path d="M24.9497 15.0503L15.0502 24.9498" fill="white" stroke="white" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M15.0503 15.0503L24.9498 24.9498" fill="white" stroke="white" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round" />
-          </g>
-
-        </svg>
-
-      </a>
-
-      <div class="popup__inner ">
-        <div class="popup__title">
-          Выберите класс:
-        </div>
-        <ul class="popup__classes">
-          <li class="popup__classes-item">
-            <a class="popup__classes-link" href="#">
-              1 класс
-            </a>
-            <a class="popup__classes-link" href="#">
-              2 класс
-            </a>
-            <a class="popup__classes-link" href="#">
-              3 класс
-            </a>
-          </li>
-          <li class="popup__classes-item">
-            <a class="popup__classes-link" href="#">
-              4 класс
-            </a>
-            <a class="popup__classes-link" href="#">
-              5 класс
-            </a>
-            <a class="popup__classes-link" href="#">
-              6 класс
-            </a>
-          </li>
-
-          <li class="popup__classes-item">
-            <a class="popup__classes-link" href="#">
-              7 класс
-            </a>
-            <a class="popup__classes-link" href="#">
-              8 класс
-            </a>
-            <a class="popup__classes-link" href="#">
-              9 класс
-            </a>
-          </li>
-          <li class="popup__classes-item">
-            <a class="popup__classes-link" href="#">
-              10 класс
-            </a>
-            <a class="popup__classes-link" href="#">
-              11 класс
-            </a>
-          </li>
-
-        </ul>
-
-
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<script src="libs/jquery.min.js"></script>
-<script src="libs/jquery.formstyler.min.js"></script>
-<script src="libs/slick.min.js"></script>
-<script src="js/main.min.js"></script>
-</body>
-
-</html>
+@include('components/_footer-scripts.html')

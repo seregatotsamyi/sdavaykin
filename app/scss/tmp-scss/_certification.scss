@@ -120,6 +120,78 @@
         }
       }
     }
+
+    &._3 {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "a b b c"
+        "a d e f"
+        "g h y i"
+        "j j k i";
+
+      & .certification__item-wrap {
+
+        &:nth-child(7) {
+          min-height: 154px;
+
+          @include adpt ($tab-r) {
+            min-height: 162px;
+          }
+        }
+
+        &:nth-child(11) {
+          grid-area: k;
+          min-height: 154px;
+
+          @include adpt ($tab-r) {
+            min-height: 162px;
+          }
+        }
+
+        &:nth-child(12) {
+          grid-area: y;
+        }
+      }
+    }
+
+    &._4 {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "a b b c"
+        "d e f g"
+        "h i l j"
+        "k k y m";
+
+      & .certification__item-wrap {
+
+        &:nth-child(7) {
+          min-height: 154px;
+
+          @include adpt ($tab-r) {
+            min-height: 162px;
+          }
+        }
+
+        &:nth-child(11) {
+          grid-area: k;
+          min-height: 154px;
+
+          @include adpt ($tab-r) {
+            min-height: 162px;
+          }
+        }
+
+        &:nth-child(12) {
+          grid-area: y;
+        }
+        &:nth-child(13) {
+          grid-area: l;
+        }
+        &:nth-child(14) {
+          grid-area: m;
+        }
+      }
+    }
   }
 
   &__item {
@@ -161,6 +233,16 @@
 
     &:nth-child(1) {
       grid-area: a;
+
+      & .certification__text {
+        max-width: 150px;
+        margin-left: auto;
+
+        @include adpt ($tab-r) {
+          max-width: 100%;
+          margin-left: 0;
+        }
+      }
     }
 
     &:nth-child(2) {

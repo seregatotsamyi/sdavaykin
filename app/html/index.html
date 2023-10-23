@@ -422,61 +422,7 @@
     </div>
   </section>
 
-  <section class="stages">
-    <div class="container">
-      <div class="stages__title _h2">
-        Этапы прохождения промежуточной аттестации
-      </div>
-      <div class="stages__inner">
-        <img class="stages__img" src="images/decor/stages.svg" alt="stages" width="824" height="290">
-        <div class="stages__item _1">
-          <div class="stages__number">
-            1
-          </div>
-          <div class="stages__subtitle text-bold">
-            Регистрация на портале
-          </div>
-          <div class="stages__text">
-            После подачи заявки мы отправим список нужных нам документов и анкету, куда следует внести данные ребёнка
-          </div>
-        </div>
-        <div class="stages__item _2">
-          <div class="stages__number">
-            2
-          </div>
-          <div class="stages__subtitle text-bold">
-            Оформление и прикрепление к школе
-          </div>
-          <div class="stages__text">
-            Получив заполненную анкету и сканы документов, мы зачисляем ученика в аккредитованную школу-партнёр
-          </div>
-        </div>
-        <div class="stages__item _3">
-          <div class="stages__number">
-            3
-          </div>
-          <div class="stages__subtitle text-bold">
-            Обучение и тренинги
-          </div>
-          <div class="stages__text">
-            Ученику и родителям предоставляется доступ к учебным материалам платформы и прохождению аттестаций
-          </div>
-        </div>
-        <div class="stages__item _4">
-          <div class="stages__number">
-            4
-          </div>
-          <div class="stages__subtitle text-bold">
-            Дистанционная аттестация
-          </div>
-          <div class="stages__text">
-            После успешной аттестации выдаётся табель с оценками подтверждающий прохождение курса. Данные вносятся
-            в единый реестр. Вы можете продолжить обучение в любой школе. В том числе и муниципальной
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  @include('components/_stages.html')
 
   <section class="order">
     <div class="container">
@@ -662,88 +608,7 @@
     </div>
   </section>
 
-  <section class="questions">
-    <div class="container">
-      <div class="questions__title _h2">
-        Часто задаваемые вопросы
-      </div>
-      <div class="questions__inner">
-        <img class="questions__img" src="images/decor/questions.svg" alt="questions" width="360" height="440">
-        <div class="questions__content">
-          <ul class="questions__list">
-            <li class="questions__item">
-              <div class="questions__top">
-                <img class="questions__img-btn" src="images/icon/plus.svg" alt="plus" width="40" height="40">
-                <div class="questions__text-top">
-                  Как ученик поймёт, какие темы его ждут на аттестации?
-                </div>
-              </div>
-              <div class="questions__bottom">
-                Вопросы и темы, которые ожидаются в тестах на аттестацию, присутствуют в тренировочных тестах. Проходя
-                их, ребёнок готовится к испытанию, можно сказать — практически. Кроме того, об особенностях предстоящих
-                тестирований по разным предметам ученика информирует его куратор.
-              </div>
-            </li>
-            <li class="questions__item">
-              <div class="questions__top">
-                <img class="questions__img-btn" src="images/icon/plus.svg" alt="plus" width="40" height="40">
-                <div class="questions__text-top">
-                  Существуют ли временные рамки прохождения тестов исходя из поры учебного года?
-                </div>
-              </div>
-              <div class="questions__bottom">
-                Дистанционные аттестации на портале «Сдавайкин» можно проходить когда угодно, кроме каникул (до 31 мая).
-                Сдать экзамен ребёнок может в произвольное время. На аттестацию по отдельному предмету даётся
-                от 6 до 8 ч, чего вполне достаточно для комфортного тестирования.
-              </div>
-            </li>
-            <li class="questions__item">
-              <div class="questions__top">
-                <img class="questions__img-btn" src="images/icon/plus.svg" alt="plus" width="40" height="40">
-                <div class="questions__text-top">
-                  Ребёнок на семейном образовании, сдаёт аттестации в ближайшей школе, можно ли экзаменоваться у вас?
-
-                </div>
-              </div>
-              <div class="questions__bottom">
-                Разумеется. Для этого нужно пройти регистрацию и прислать нам копии документов ученика. Он будет
-                прикреплён к СОШ «Пенаты» (г. Москва). Здесь (на каком-то этапе) он будет сдавать ОГЭ/ЕГЭ в очной форме,
-                а на нашем портале — промежуточные аттестации в дистанционном режиме.
-              </div>
-            </li>
-            <li class="questions__item">
-              <div class="questions__top">
-                <img class="questions__img-btn" src="images/icon/plus.svg" alt="plus" width="40" height="40">
-                <div class="questions__text-top">
-                  В нашей школе негативно относятся к переводу ребёнка на семейную форму, что делать?
-                </div>
-              </div>
-              <div class="questions__bottom">
-                Запретить перевод ученика на семейное образование в школе не имеют права: здесь все зависит от позиции
-                родителей. А сервис «Сдавайкин» сделает все, чтобы ваш ребёнок получил хорошие знания!
-              </div>
-            </li>
-            <li class="questions__item">
-              <div class="questions__top">
-                <img class="questions__img-btn" src="images/icon/plus.svg" alt="plus" width="40" height="40">
-                <div class="questions__text-top">
-                  Можно ли как-то удостовериться, что ребёнок «потянет» самостоятельную подготовку?
-                </div>
-              </div>
-              <div class="questions__bottom">
-                После регистрации мы отправим программу по соответствующему классу и предмету. Эта информация поможет
-                понять — к чему следует стремиться. Также мы предоставляем задания, идентичные тем, что ожидаются
-                в аттестационных тестах. По ответам на них вашего ребёнка можно сделать определённые выводы.
-              </div>
-            </li>
-          </ul>
-          <a class="questions__link btn btn_4" href="#">
-            Открыть все вопросы
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+  @include('components/_questions.html')
 
   <section class="call">
     <div class="container">

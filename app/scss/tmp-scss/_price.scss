@@ -1,0 +1,170 @@
+.price {
+  padding: 50px 0;
+
+  @include adpt ($bmob-r) {
+    padding: 25px 0;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 70px;
+
+    @include adpt ($tab-r) {
+      margin-bottom: 60px;
+    }
+
+    @include adpt ($stab-r) {
+      margin-bottom: 50px;
+    }
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__content {
+    position: relative;
+    margin-right: 300px;
+    margin-bottom: 56px;
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid $grey;
+    box-shadow: 4px 4px 10px 0px rgba(107, 128, 137, 0.30);
+    display: flex;
+    justify-content: space-between;
+
+    @include adpt ($tab-r) {
+      margin-bottom: 15px;
+      margin-right: 258px;
+      padding-right: 35px;
+    }
+
+    @include adpt ($mtab-r) {
+      margin-right: 150px;
+      padding-right: 50px;
+      padding-left: 20px;
+    }
+
+    @include adpt ($stab-r) {
+      margin-right: 0;
+      margin-bottom: 0;
+      padding: 20px;
+    }
+
+    @include adpt ($bmob-r) {
+      flex-direction: column;
+      padding-bottom: 25px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background-color: $blueLight;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      left: 5px;
+      top: -5px;
+    }
+  }
+
+  &__num {
+    @include adpt ($bmob-r) {
+      font-size: 18px;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    margin-right: 30px;
+    flex: 1;
+    max-width: 222px;
+
+    @include adpt ($bmob-r) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__top {
+    margin-bottom: 20px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__img {
+    max-width: 340px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+    right: 0;
+    bottom: -56px;
+
+    @include adpt ($tab-r) {
+      max-width: 300px;
+      bottom: -15px;
+    }
+
+    @include adpt ($mtab-r) {
+      max-width: 210px;
+    }
+
+    @include adpt ($stab-r) {
+      display: none;
+    }
+  }
+
+  &__price {
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    margin-bottom: 10px;
+
+    @include adpt ($bmob-r) {
+      font-size: 18px;
+    }
+  }
+
+  &__right {
+    flex: 1;
+  }
+
+  &__link {
+    text-decoration: underline;
+  }
+
+  &__item {
+    padding-left: 34px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url("../images/icon/check.svg");
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 11px;
+    }
+  }
+}

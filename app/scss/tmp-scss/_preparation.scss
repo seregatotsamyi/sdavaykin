@@ -1,0 +1,84 @@
+.preparation {
+  position: relative;
+  z-index: 2;
+  padding: 50px 0;
+
+  @include adpt ($bmob-r) {
+    padding: 25px 0;
+  }
+
+  &__inner {
+    padding: 40px 30px;
+    position: relative;
+    border-radius: 20px;
+    background-color: $greenLight;
+    box-shadow: 4px 4px 10px 0px rgba(107, 128, 137, 0.30);
+
+    @include adpt ($bmob-r) {
+      padding: 20px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    z-index: 0;
+    bottom: -50px;
+    height: auto;
+    width: 100%;
+    max-width: 387px;
+    pointer-events: none;
+    object-fit: contain;
+
+    @include adpt ($tab-r) {
+      max-width: 290px;
+      bottom: 0;
+    }
+
+    @include adpt ($bmob-r) {
+      display: none;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin-bottom: 10px;
+
+    @include adpt ($bmob-r) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+    margin-bottom: 30px;
+
+    @include adpt ($tab-r) {
+      max-width: 100%;
+      padding-right: 330px;
+    }
+
+    @include adpt ($stab-r) {
+      padding-right: 280px;
+    }
+
+    @include adpt ($bmob-r) {
+      text-align: center;
+      margin-bottom: 20px;
+      padding-right: 0;
+      max-width: 100%;
+    }
+  }
+
+  &__btn {
+    @include adpt ($bmob-r) {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

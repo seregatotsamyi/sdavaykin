@@ -47,6 +47,15 @@
       padding: 50px 20px;
     }
 
+    &._class {
+      max-width: 320px;
+      padding: 50px 20px;
+
+      & .popup__close {
+        top: 10px;
+        right: 10px;
+      }
+    }
 
   }
 
@@ -108,4 +117,22 @@
     }
   }
 
+  &__classes-item {
+    display: flex;
+    justify-content: space-around;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__classes-link {
+    color: $white;
+
+    &:hover {
+      color: $yellow;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+    }
+  }
 }

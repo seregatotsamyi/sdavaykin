@@ -5,6 +5,18 @@
     padding: 25px 0;
   }
 
+  &._green {
+    & .price__content::after {
+      background-color: $greenLight;
+    }
+  }
+
+  &._yellow {
+    & .price__content::after {
+      background-color: $yellowLight;
+    }
+  }
+
   &__title {
     text-align: center;
     margin-bottom: 70px;

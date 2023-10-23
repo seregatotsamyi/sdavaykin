@@ -342,6 +342,183 @@
         }
       }
     }
+
+    &._8 {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "a b b c"
+        "d e f g"
+        "h i j k"
+        "l l m n";
+
+      & .certification__item-wrap {
+
+        &:nth-child(7) {
+          min-height: 154px;
+
+          @include adpt ($tab-r) {
+            min-height: 162px;
+          }
+        }
+
+        &:nth-child(8) {
+          min-height: 154px;
+
+          @include adpt ($tab-r) {
+            min-height: 162px;
+          }
+        }
+
+        &:nth-child(11) {
+          grid-area: k;
+          min-height: 154px;
+
+          @include adpt ($tab-r) {
+            min-height: 162px;
+          }
+        }
+
+        &:nth-child(12) {
+          grid-area: l;
+          min-height: 154px;
+
+          @include adpt ($tab-r) {
+            min-height: 162px;
+          }
+        }
+
+        &:nth-child(13) {
+          grid-area: m;
+        }
+
+
+        &:nth-child(15) {
+          min-height: 154px;
+
+          @include adpt ($tab-r) {
+            min-height: 162px;
+          }
+        }
+      }
+    }
+
+    &._9 {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "a b c d"
+        "e f g h"
+        "i j k l"
+        "m n o p ";
+
+      & .certification__item-wrap {
+
+        &:nth-child(7) {
+          min-height: 154px;
+
+          @include adpt ($tab-r) {
+            min-height: 162px;
+          }
+        }
+
+        &:nth-child(8) {
+          min-height: 154px;
+
+          @include adpt ($tab-r) {
+            min-height: 162px;
+          }
+        }
+
+        &:nth-child(11) {
+          grid-area: k;
+          min-height: 154px;
+
+          @include adpt ($tab-r) {
+            min-height: 162px;
+          }
+        }
+
+        &:nth-child(12) {
+          grid-area: l;
+          min-height: 154px;
+
+          @include adpt ($tab-r) {
+            min-height: 162px;
+          }
+        }
+
+        &:nth-child(13) {
+          grid-area: m;
+        }
+
+
+        &:nth-child(15) {
+          min-height: 154px;
+
+          @include adpt ($tab-r) {
+            min-height: 162px;
+          }
+        }
+      }
+    }
+
+    &._10 {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "a b c d"
+        "e e f g"
+        "h i j k"
+        "l m n o";
+
+      & .certification__item-wrap {
+
+        &:nth-child(7) {
+          min-height: 154px;
+
+          @include adpt ($tab-r) {
+            min-height: 162px;
+          }
+        }
+
+        &:nth-child(8) {
+          min-height: 154px;
+
+          @include adpt ($tab-r) {
+            min-height: 162px;
+          }
+        }
+
+        &:nth-child(11) {
+          grid-area: k;
+          min-height: 154px;
+
+          @include adpt ($tab-r) {
+            min-height: 162px;
+          }
+        }
+
+        &:nth-child(12) {
+          grid-area: l;
+          min-height: 154px;
+
+          @include adpt ($tab-r) {
+            min-height: 162px;
+          }
+        }
+
+        &:nth-child(13) {
+          grid-area: m;
+        }
+
+
+        &:nth-child(15) {
+          min-height: 154px;
+
+          @include adpt ($tab-r) {
+            min-height: 162px;
+          }
+        }
+      }
+    }
   }
 
   &__item {

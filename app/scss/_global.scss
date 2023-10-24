@@ -187,4 +187,16 @@ body {
   font-weight: 700;
   font-size: 50px;
   line-height: 1.2;
+
+  @include adpt ($mtab-r) {
+    font-size: 40px;
+  }
+
+  @include adpt ($stab-r) {
+    font-size: 32px;
+  }
+
+  @include adpt ($bmob-r) {
+    font-size: 28px;
+  }
 }

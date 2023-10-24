@@ -1,0 +1,143 @@
+@include('components/_head.html')
+
+@include('components/_header.html')
+
+<main class="main">
+
+  <div class="breadcrumbs">
+
+    <div class="container">
+
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a href="#">
+            Главная
+          </a>
+        </li>
+        <li class="breadcrumbs__item">
+          <span>
+            Контакты
+          </span>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <section class="promo-page _contacts">
+    <div class="container">
+      <div class="_h1 promo-page__title">
+        Контакты
+      </div>
+      <div class="promo-page__bg-wrap ">
+        <img class="promo-page__img" src="images/contacts/img_contact.svg" alt="img_contact.svg">
+      </div>
+    </div>
+  </section>
+
+  <section class="contacts">
+    <div class="container">
+      <div class="contacts__inner">
+        <div class="contacts__title _h3">
+          Свяжитесь с нами удобным способом:
+        </div>
+        <ul class="contacts__wrap">
+          <li class="contacts__item">
+            <img class="contacts__img" src="images/icon/e-mail.svg" alt="e-mail.svg" width="50" height="50">
+            <div class="contacts__content">
+              <div class="contacts__text">
+                Электронная почта <br>(для отправки документов)
+              </div>
+              <a class="contacts__link" href="mailto:sdavaikin@mail.ru">
+                sdavaikin@mail.ru
+              </a>
+            </div>
+          </li>
+          <li class="contacts__item">
+            <img class="contacts__img" src="images/icon/messenger.svg" alt="messenger.svg" width="50" height="50">
+            <div class="contacts__content">
+              <div class="contacts__text">
+                Мессенджеры <br>для обратной связи
+              </div>
+              <div class="contacts__link-inner">
+                <a class="contacts__link" href="https://t.me/+79274238608" target="_blank">
+                  Telegram
+                </a>
+                <a class="contacts__link" target="_blank" href="https://wa.me/78009000000">
+                  WhatsApp
+                </a>
+              </div>
+
+            </div>
+          </li>
+          <li class="contacts__item">
+            <img class="contacts__img" src="images/icon/phone.svg" alt="phone.svg" width="50" height="50">
+            <div class="contacts__content">
+              <div class="contacts__text">
+                Номер телефона<br>(с 8:00 до 20:00)
+              </div>
+              <a class="contacts__link" href="tel:88009000000">
+                8 800 900 00 00
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="call">
+    <div class="container">
+      <div class="call__title _h2">
+        Форма обратного звонка
+      </div>
+      <form class="call__inner">
+        <div class="call__text">
+          Заполните форму ниже и с вами оперативно свяжется наш опытный консультант. В ходе беседы мы подробно ответим
+          на все вопросы, касающиеся оформления документов и других нюансов перехода на семейное образование. Звонки
+          проводятся с 8:00 до 20:00 в будние дни.
+        </div>
+        <div class="form">
+          <div class="form__row">
+            <div class="form__inputs">
+              <div class="input">
+                <input class="input__input" type="text" placeholder="Ваше имя" name="name">
+              </div>
+            </div>
+            <div class="form__inputs">
+              <div class="input">
+                <input class="input__input tel" type="tel" placeholder="Номер телефона" name="phone">
+              </div>
+            </div>
+            <div class="form__inputs">
+              <div class="input">
+                <select class="input__input _select js-select" name="connection"
+                  data-placeholder="Как с вами связаться?">
+                  <option></option>
+                  <option value="phone">Телефон </option>
+                  <option value="WhatsApp ">WhatsApp </option>
+                  <option value="Telegram ">Telegram </option>
+                </select>
+              </div>
+            </div>
+            <button class="form__btn btn btn_4" type="submit">
+              Отправить
+            </button>
+          </div>
+
+        </div>
+        <div class="form__policy call__policy">
+          <span>Нажимая кнопку, вы соглашаетесь </span><a href="#">на&nbsp;обработку своих персональных данных</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+@include('components/_footer.html')
+@include('components/_popup.html')
+
+@include('components/_footer-scripts.html')

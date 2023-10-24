@@ -1,0 +1,37 @@
+.promo-page {
+  position: relative;
+  margin-bottom: 50px;
+
+  @include adpt ($bmob-r) {
+    margin-bottom: 30px;
+  }
+
+  &._contacts {
+    & .promo-page__bg-wrap {
+      margin-top: -80px;
+
+      @include adpt ($tab-r) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    pointer-events: none;
+  }
+
+  &__bg-wrap {
+    position: relative;
+  }
+}

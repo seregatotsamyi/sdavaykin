@@ -36,6 +36,30 @@
     }
   }
 
+  &._information {
+    & .promo-page__bg-wrap {
+      margin-top: -163px;
+
+      @include adpt ($tab-r) {
+        margin-top: -100px;
+      }
+
+      @include adpt ($stab-r) {
+        margin-top: -20px;
+      }
+    }
+
+    & .promo-page__title {
+      @include adpt ($bmob-r) {
+        font-size: 40px;
+      }
+
+      @include adpt ($smob-r) {
+        font-size: 36px;
+      }
+    }
+  }
+
   &__title {
     position: relative;
     z-index: 2;

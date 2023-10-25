@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School - разработка https://moskalevs.ru/</title>
+  <link rel="stylesheet" href="libs/slick.css">
+  <link rel="stylesheet" href="libs/jquery.formstyler.css">
+  <link rel="stylesheet" href="libs/jquery.formstyler.theme.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="body" id="body">
+
+<header class="header">
+
+  <div class="container">
+
+    <div class="header__inner">
+
+      <div class="header__logo-wrap">
+        <a class="header__logo logo" href="#">
+          <img class="logo__img" src="images/logo.svg" alt="logo" width="260" height="80">
+        </a>
+      </div>
+
+      <div class="header__right-wrap">
+
+        <div class="header__nav-wrap">
+          <nav class="header__nav menu">
+            <button class="header__burger header__burger_close  js-toggle-menu" type="button">
+              <img class="burger__img" src="images/icon/burger-menu-close.svg" alt="burger" width="40" height="40">
+              <span class="sr-only">Закрыть мобильное меню</span>
+            </button>
+            <ul class="menu__list">
+
+              <li class="menu__item">
+
+                <div class="menu__item-top">
+
+                  <a class="menu__link _arrow" href="#">
+                    Классы
+                  </a>
+
+                  <div class="menu__sublist-wrap">
+                    <ul class="menu__sublist">
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="1 класс">
+                          1 класс
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="2 класс">
+                          2 класс
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="3 класс">
+                          3 класс
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="4 класс">
+                          4 класс
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="5 класс">
+                          5 класс
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="6 класс">
+                          6 класс
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="7 класс">
+                          7 класс
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="8 класс">
+                          8 класс
+                        </a>
+                      </li>
+
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="9 класс">
+                          9 класс
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="10 класс">
+                          10 класс
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="11 класс">
+                          11 класс
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+              </li>
+
+              <li class="menu__item">
+
+                <div class="menu__item-top">
+                  <a class="menu__link" href="#">
+                    Контакты
+
+                  </a>
+                </div>
+              </li>
+
+              <li class="menu__item">
+
+                <div class="menu__item-top">
+
+                  <a class="menu__link _arrow" href="#">
+                    Родителям
+                  </a>
+
+                  <div class="menu__sublist-wrap _second">
+                    <ul class="menu__sublist">
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text=" Документы и лицензии">
+                          Документы и лицензии
+
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="Вопрос-ответ">
+                          Вопрос-ответ
+
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="Блог">
+                          Блог
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="Новости">
+                          Новости
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="Информация о СО">
+                          Информация о СО
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="ЕГЭ/ОГЭ">
+                          ЕГЭ/ОГЭ
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+
+              </li>
+            </ul>
+            <a class="menu__btn btn popup--link" href="#feedback">
+              Отправить заявку
+            </a>
+          </nav>
+        </div>
+
+        <div class="header__phone">
+          <a class="header__phone-link text-bold" href="tel:89005555555">
+            8 900 555 55 55
+          </a>
+          <span class="header__schedule">
+            c 8:00 до 20:00
+          </span>
+        </div>
+
+        <button class="header__burger  js-toggle-menu" type="button">
+          <img class="burger__img" src="images/icon/burger-menu.svg" alt="burger" width="40" height="40">
+          <span class="sr-only">Открыть мобильное меню</span>
+        </button>
+
+        <a class="header__btn btn popup--link" href="#feedback">
+          Отправить заявку
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+<main class="main">
+
+  <div class="breadcrumbs">
+
+    <div class="container">
+
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a href="#">
+            Главная
+          </a>
+        </li>
+        <li class="breadcrumbs__item">
+          <span>
+            Информация о СО
+          </span>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <section class="promo-page _information">
+    <div class="container">
+      <div class="_h1 promo-page__title">
+        Дистанционное образование и его особенности
+      </div>
+      <div class="promo-page__bg-wrap ">
+        <img class="promo-page__img" src="images/img_info.svg" alt="img_info.svg">
+      </div>
+    </div>
+  </section>
+
+  <section class="information">
+    <div class="container">
+      <ul class="information__list">
+        <li class="information__item">
+          <div class="information__title _h3">
+            Заочное и семейное обучение: что лучше?
+          </div>
+          <div class="information__wrap ">
+            <div class="information__text-inner">
+              <p>
+                Многие отождествляют семейное и заочное образование. Между тем они имеют существенные различия.
+
+
+              </p>
+              <p>
+                <b>
+                  При заочной форме
+                </b>
+                – ученик прикреплен к школе (обычно по месту жительства). Он обязан учиться по общим планам, сдает те же
+                самые проверочные и контрольные работы, что и обычные школьники.
+              </p>
+              <p>
+                Главное отличие заочного обучения от стандартного: ребенок может посещать уроки выборочно. Тем не менее,
+                учиться приходится по правилам школы, и де-факто – он к ней «привязан».
+              </p>
+            </div>
+            <div class="information__text-inner">
+              <p>
+                <b>Семейное образование</b> – это полная свобода. Школьник получает знания самостоятельно, а за качество
+                его знаний отвечают не учителя, а родители. Ребенок числится в контингенте официально аккредитованной
+                школы исключительно ради сдачи промежуточных аттестаций. Такие тестирования проводятся в онлайн-форме, а
+                их результаты служат основанием для допуска к прохождению ОГЭ/ЕГЭ. Семейная форма обучения подразумевает
+                свободный график учебы и аттестаций. При необходимости доступен экстернат.
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="information__item">
+          <div class="information__title _h3">
+            Кому подходит семейное образование
+          </div>
+          <div class="information__wrap _1">
+            <div class="information__text-inner">
+              <p>
+                Семейное обучение оптимально для тех, кто не желает (или не может) тратить время на посещение школьных
+                уроков.
+              </p>
+              <p>
+                Оно подходит для детей, чьи семьи часто переезжают с места на место или живут за рубежом. Семейная форма
+                образования — идеальна для детей, серьёзно занимающихся спортом, поскольку им нужно постоянно
+                тренироваться, а не сидеть за партой. Обучение в семье незаменимо для детей, имеющих проблемы
+                со здоровьем и чисто физически неспособных каждый день ходить в школу.
+              </p>
+
+            </div>
+            <div class="information__right">
+              <div class="information__text-inner">
+                <p>
+                  Подойдёт оно и тем, кто стремится освоить школьный курс по ускоренной программе.
+                </p>
+              </div>
+              <div class="information__text-wrap">
+                Пребывающий на семейном обучении ребёнок не привязан к государственной школе. Он может свободно
+                путешествовать, посещать спортивные секции и кружки по удобному графику, при этом — высыпаясь по утрам
+                и не нервничая по поводу отметок.
+              </div>
+            </div>
+
+          </div>
+        </li>
+        <li class="information__item">
+          <div class="information__title _h3">
+            Преимущества семейного образования над заочным
+          </div>
+          <div class="information__wrap">
+            <div class="information__text-inner">
+              <p>
+                Если родители принимают решение освободить ребенка от обязательного посещения школы, неизбежно возникает
+                вопрос – какое обучение предпочесть: заочное или семейное? Некоторыми плюсами заочной формы выступают
+                строгое следование школьным учебным планам и учительский контроль (хотя и не полный).
+              </p>
+              <p>
+                Преимуществ у семейного образования заметно больше:
+              </p>
+
+            </div>
+            <ul class="information__item-list">
+              <li class="information__item-item">
+                обучение в спокойной обстановке без страха получить плохую отметку;
+              </li>
+              <li class="information__item-item">
+                свободный график занятий, способствующий повышению мотивации;
+              </li>
+              <li class="information__item-item">
+                собственный темп обучения, помогающий усвоить плохо дающиеся знания;
+              </li>
+              <li class="information__item-item">
+                занятия по индивидуальной программе с упором на «полезные» предметы;
+              </li>
+              <li class="information__item-item">
+                воспитание у ребенка самостоятельности и самодисциплины.
+              </li>
+            </ul>
+          </div>
+          <div class="information__info">
+            <img class="information__info-bg" src="images/image_faq.svg" alt="image_faq.svg" width="150" height="280">
+            <p>
+              При переводе ребенка на семейное образование родителям необходимо осознавать свою ответственность. В
+              обычной школе – за усвоение знаний учеником отвечают его учителя. Семейная форма обучения накладывает
+              подобные обязательства уже на родителей. Впрочем, при использовании правильных методов подготовки ребенка
+              проблем с качеством усвоения не возникает.
+            </p>
+            <p>
+              Помочь в дистанционной учебе готов наш сервис «Сдавайкин»: он создан специально для родителей и детей,
+              которые учатся самостоятельно!
+            </p>
+          </div>
+        </li>
+        <li class="information__item">
+          <div class="information__title _h3">
+            Три формы домашнего обучения: выбирайте оптимальную!
+          </div>
+          <div class="information__wrap _2">
+            <div class="information__left">
+              <div class="information__text-inner">
+                <p>
+                  В наши дни сложились три основных способа обучения детей в рамках семейного образования. Иногда
+                  они комбинируются и пересекаются, но, как правило, в качестве основного выбирается какой-то один.
+                </p>
+
+              </div>
+              <div class="information__text-wrap">
+                <div class="information__text-title text-bold">
+                  Самостоятельная учеба
+                </div>
+                <p>
+                  Ребенка обучают родители. Вместе с ним они штудируют учебники, проходят темы, проверяют знания.
+                  Главный
+                  плюс такого обучения – его бесплатность. К сожалению, на этом преимущества самостоятельной учебы
+                  заканчиваются. Мамы и папы вынуждены тратить на обучение массу личного времени, а в старших классах
+                  (где
+                  дисциплины довольно сложны) уже не в состоянии объяснить ребенку все темы на высоком уровне.
+                </p>
+
+              </div>
+            </div>
+            <div class="information__right">
+              <div class="information__text-wrap">
+                <div class="information__text-title text-bold">
+                  Учеба с репетиторами
+                </div>
+                <p>
+                  Неплохой вариант, если, конечно, семейный бюджет безграничен и его вполне хватит на оплату нескольким
+                  предметникам. Кроме дороговизны, минусом такой учебы является привязка к графику посещения ученика
+                  репетиторами. Из-за этого теряется одно из главных преимуществ семейного образования: о свободном
+                  графике занятий можно забыть. Да и частое пребывание в доме чужих людей мало кому нравится.  
+                </p>
+
+              </div>
+              <div class="information__text-wrap">
+                <div class="information__text-title text-bold">
+                  Учеба с сервисом дистанционного образования
+                </div>
+                <p>
+                  Пожалуй, лучший для большинства семей выбор. Ребенок учится самостоятельно по профессионально
+                  подготовленным программам дистанционного обучения. Педагоги проверяют домашние задания, дают ученику
+                  рекомендации и готовят его к промежуточным аттестациям.
+                </p>
+                <p>
+                  Обучаясь с сервисом «Сдавайкин», можно выбрать оптимальный график занятий, сделать особый упор на
+                  предметах, которые пригодятся ребенку в будущем, и снизить нагрузку в менее «нужных» дисциплинах.
+                </p>
+
+              </div>
+            </div>
+
+
+          </div>
+        </li>
+        <li class="information__item">
+          <div class="information__title _h3">
+            Семейное образование с точки зрения закона
+          </div>
+          <div class="information__edu">
+            <div class="information__edu-text">
+              С юридической точки зрения обучение на дому – законное право любой российской семьи. Его аспекты подробно
+              регламентирует закон № 273-ФЗ «Об образовании в РФ». До 9 класса для перевода ребенка на семейное обучение
+              достаточно заявления родителей. В 10-11 классах старшеклассник считается достаточно зрелым для принятия
+              самостоятельного решения. Чтобы перевестись на домашнюю форму (в законе она определяется как
+              «самообразование»), он подает личное заявление, но родители должны подтвердить свое согласие.
+            </div>
+            <div class="information__edu-img-wrap">
+              <img class="information__edu-img" src="images/cat/Image_catzakon.svg" alt="Image_catzakon.svg" width="400"
+                height="230">
+            </div>
+          </div>
+        </li>
+        <li class="information__item">
+          <div class="information__title _h3">
+            Аттестации на семейном образовании
+          </div>
+          <div class="information__wrap _3">
+
+            <div class="information__quote">
+
+              <div class="information__quote-inner">
+                <img class="information__quote-img" src="images/icon/cats_icon.svg" alt="cats_icon.png" width="100"
+                  height="100">
+                <p class="text-bold">
+                  Промежуточные аттестации при учёбе с сервисом «Сдавайкин» проводятся дистанционно: без нервирующих
+                  онлайн-камер и ограничений по времени. Если успешное прохождение тестов не выходит с первого раза,
+                  предусмотрена возможность пересдачи. В отличие от других сервисов, у нас это бесплатно.
+                </p>
+              </div>
+
+            </div>
+            <div class="information__quote-text">
+              Государственные аттестации ОГЭ и ЕГЭ ребенок, проходящий семейное обучение, должен сдавать на общих
+              основаниях. Для этого он прикрепляется к школе, имеющей аккредитацию. В этой связи сервис «Сдавайкин»
+              сотрудничает с московской школой-партнером «Пенаты». Обучающиеся у нас дети зачисляются в контингент
+              учебного заведения. При прохождении промежуточных аттестаций они получают официальные справки. Без их
+              наличия ребенок не может быть допущен к государственным аттестациям ОГЭ/ЕГЭ. Соответственно, после
+              успешного итогового тестирования ученик получает аттестат школы, к которой прикреплен.
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="order ">
+    <div class="container">
+      <div class="order__inner">
+        <div class="order__title _info _h3">
+          Как перейти на семейное образование
+        </div>
+        <div class="order__text">
+          Сделать это можно, начиная с первого класса, на любом отрезке учебного года. Обращаем особое внимание,
+          что уровень успеваемости ученика или состояние его здоровья при изменении формы обучения — никакой роли
+          не играют. Достаточно желания родителей и самого ребёнка. Перевод на семейное обучение сводится к трём этапам.
+        </div>
+        <ul class="order__wrap">
+          <li class="order__item">
+            <div class="order__subtitle text-bold">
+              1. Оповещение о переводе на домашнее обучение
+            </div>
+            <div class="order__item-text">
+              Уведомление об этом отправляется в департамент образования заказным письмом или вручается секретарю лично.
+              Делать это следует по месту реального проживания (а не по месту регистрации, если семья живёт в другом
+              месте). Необходимо убедиться, что заявление официально зарегистрировано и ему присвоен входящий номер.
+            </div>
+          </li>
+          <li class="order__item">
+            <div class="order__subtitle text-bold">
+              2. Изъятие документов из канцелярии школы
+            </div>
+            <div class="order__item-text">
+              Если ребёнок уже учится в обычной школе, требуется составить заявление на имя её директора.
+              В нем сообщается о решении изменить форму обучения с очной на семейную и намерении забрать личное дело
+              ученика. Подобное заявление необходимо, даже если в будущем планируется проходить в данной школе
+              аттестацию. Документ следует вручить лично или отправить заказным письмом.
+            </div>
+          </li>
+          <li class="order__item">
+            <div class="order__subtitle text-bold">
+              3. Выбор школы или сервиса для аттестации
+            </div>
+            <div class="order__item-text">
+              Для этого заключается договор с подходящей школой либо онлайн-ресурсом дистанционного обучения
+              и аттестации. Поскольку вы находитесь на сайте одного из лучших сервисов подобного рода, можете смело
+              регистрироваться на портале «Сдавайкин». Будем вместе учиться, успешно сдавать экзамены и эффективно
+              готовиться к ОГЭ/ЕГЭ!
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="call _yellow">
+    <div class="container">
+      <div class="call__title _h2">
+        Ответим на любые вопросы
+      </div>
+      <form class="call__inner">
+        <div class="call__text">
+          Заполните форму ниже и с вами оперативно свяжется наш опытный консультант. В ходе беседы мы подробно ответим
+          на все вопросы, касающиеся оформления документов и других нюансов перехода на семейное образование. Звонки
+          проводятся с 8:00 до 20:00 в будние дни.
+        </div>
+        <div class="form">
+          <div class="form__row">
+            <div class="form__inputs">
+              <div class="input">
+                <input class="input__input" type="text" placeholder="Ваше имя" name="name">
+              </div>
+            </div>
+            <div class="form__inputs">
+              <div class="input">
+                <input class="input__input tel" type="tel" placeholder="Номер телефона" name="phone">
+              </div>
+            </div>
+            <div class="form__inputs">
+              <div class="input">
+                <select class="input__input _select js-select" name="connection"
+                  data-placeholder="Как с вами связаться?">
+                  <option></option>
+                  <option value="phone">Телефон </option>
+                  <option value="WhatsApp ">WhatsApp </option>
+                  <option value="Telegram ">Telegram </option>
+                </select>
+              </div>
+            </div>
+            <button class="form__btn btn btn_4" type="submit">
+              Отправить
+            </button>
+          </div>
+
+        </div>
+        <div class="form__policy call__policy">
+          <span>Нажимая кнопку, вы соглашаетесь </span><a href="#">на&nbsp;обработку своих персональных данных</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+
+  <div class="footer__inner-wrap">
+
+    <div class="container">
+
+      <picture>
+        <source media="(max-width: 768px)" srcset="images/decor/footer-bg-mob.svg">
+        <source srcset="images/decor/footer-bg.svg">
+        <img class="footer__bg" src="images/decor/footer-bg.svg" alt="footer-bg.svg">
+      </picture>
+
+      <div class="footer__inner">
+        <div class="footer__left">
+          <a class="footer__logo logo" href="#">
+            <img class="logo__img" src="images/logo-2.svg" alt="logo" width="250" height="71">
+          </a>
+          <div class="footer__text-block">
+            <p>
+              ООО «Сдавайкин»
+            </p>
+            <p>
+              ИНН 00000000
+            </p>
+            <p>
+              ОГРН 000000000
+            </p>
+            <p>
+              Возрастной рейтинг 6+
+            </p>
+          </div>
+          <a class="footer__policy" href="#" data-text="Политика конфиденциальности">
+            Политика конфиденциальности
+          </a>
+        </div>
+        <div class="footer__grid">
+          <div class="footer__list-wrap _a">
+            <div class="footer__title text-bold">
+              Классы
+            </div>
+            <ul class="footer__list _two-column">
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="1 класс">
+                  1 класс
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="2 класс">
+                  2 класс
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="3 класс">
+                  3 класс
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="4 класс">
+                  4 класс
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="5 класс">
+                  5 класс
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="6 класс">
+                  6 класс
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="7 класс">
+                  7 класс
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="8 класс">
+                  8 класс
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="9 класс">
+                  9 класс
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="10 класс">
+                  10 класс
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="11 класс">
+                  11 класс
+                </a>
+              </li>
+
+            </ul>
+          </div>
+          <div class="footer__list-wrap _b">
+            <div class="footer__title text-bold">
+              Главная
+            </div>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="Документы и лицензии">
+                  Документы и лицензии
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="Вопрос-ответ">
+                  Вопрос-ответ
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="Блог">
+                  Блог
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="Новости">
+                  Новости
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="Информация о СО">
+                  Информация о СО
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="ЕГЭ/ОГЭ">
+                  ЕГЭ/ОГЭ
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list-wrap _c">
+            <div class="footer__title text-bold">
+              Контакты
+            </div>
+            <ul class="footer__links">
+              <li class="footer__links-item">
+                <a class="footer__links-link" href="tel:89005555555" data-text="8 900 555 55 55">
+                  8 900 555 55 55
+                </a>
+              </li>
+              <li class="footer__links-item">
+                <a class="footer__links-link" href="mailto:sdavaikin@mail.ru" data-text="sdavaikin@mail.ru">
+                  sdavaikin@mail.ru
+                </a>
+              </li>
+            </ul>
+            <div class="footer__social social">
+              <ul class="social__list">
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <img class="social__img" src="images/social/tg.svg" alt="social" width="26" height="21">
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <img class="social__img" src="images/social/wa.svg" alt="social" width="26" height="21">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__list-wrap _d">
+            <div class="footer__title text-bold">
+              Школа-партнер
+            </div>
+            <p class="footer__text">
+              ОАНО СОШ "Пенаты"
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+<div id="feedback" class="popup">
+  <div class="popup__body">
+    <div class="popup__content ">
+      <a href="#" class="popup__close popup--close">
+
+        <svg class="popup__close-img" width="40" height="40" viewBox="0 0 40 40" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g >
+            <path d="M24.9497 15.0503L15.0502 24.9498"  fill="white" stroke="white" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M15.0503 15.0503L24.9498 24.9498"  fill="white" stroke="white" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </g>
+        
+        </svg>
+
+      </a>
+
+      <form class="popup__inner">
+        <div class="popup__title">
+          Заполните форму и с вами свяжется менеджер.
+        </div>
+        <div class="popup__text">
+          Вы сможете задать любой вопрос о сдаче аттестации в «Сдавайкин». А также получить логин и пароль для доступа
+          в личный кабинет и начать регистрацию ребёнка на сервисе.
+        </div>
+        <div class="form">
+          <div class="form__row">
+            <div class="form__inputs">
+              <div class="input">
+                <input class="input__input" type="text" placeholder="Ваше имя" name="name">
+              </div>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__inputs">
+              <div class="input">
+                <input class="input__input tel" type="tel" placeholder="Номер телефона" name="phone">
+              </div>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__inputs">
+              <div class="input">
+                <select class="input__input _select js-select" name="connection"
+                  data-placeholder="Как с вами связаться?">
+                  <option></option>
+                  <option value="phone">Телефон </option>
+                  <option value="WhatsApp ">WhatsApp </option>
+                  <option value="Telegram ">Telegram </option>
+                </select>
+              </div>
+            </div>
+            <button class="form__btn btn btn_3" type="submit">
+              Отправить
+            </button>
+
+
+          </div>
+
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+<div id="doc1" class="popup _doc">
+  <div class="popup__body">
+    <div class="popup__content ">
+      <a href="#" class="popup__close popup--close">
+
+        <svg class="popup__close-img" width="40" height="40" viewBox="0 0 40 40" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path d="M24.9497 15.0503L15.0502 24.9498" fill="white" stroke="white" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M15.0503 15.0503L24.9498 24.9498" fill="white" stroke="white" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </g>
+
+        </svg>
+
+      </a>
+
+      <div class="popup__inner">
+        <div class="popup__doc-inner">
+          <img class="popup__doc-img" src="images/doc/1.png" alt="doc">
+          <img class="popup__doc-img" src="images/doc/1.png" alt="doc">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="libs/jquery.min.js"></script>
+<script src="libs/jquery.formstyler.min.js"></script>
+<script src="libs/slick.min.js"></script>
+<script src="js/main.min.js"></script>
+</body>
+
+</html>

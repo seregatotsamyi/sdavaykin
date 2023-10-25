@@ -5,11 +5,12 @@
     padding: 25px 0;
   }
 
-  &._yellow{
-    & .call__inner::after{
+  &._yellow {
+    & .call__inner::after {
       background-color: $yellowLight;
     }
   }
+
   &__title {
     margin: 0 auto 50px;
     text-align: center;

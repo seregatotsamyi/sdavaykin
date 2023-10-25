@@ -1,0 +1,353 @@
+.information {
+  position: relative;
+  overflow: hidden;
+  padding-top: 50px;
+
+  @include adpt ($bmob-r) {
+    padding-top: 0;
+  }
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+  }
+
+  &::after {
+    aspect-ratio: 52/105;
+    width: 100%;
+    height: auto;
+    background-image: url('../images/decor/info1.svg');
+    max-width: 520px;
+    right: 0;
+    top: 6%;
+
+    @include adpt ($big-r) {
+      right: -300px;
+    }
+
+    @include adpt ($tab-r) {
+      right: -350px;
+    }
+
+    @include adpt ($bmob-r) {
+      max-width: 300px;
+      right: -200px;
+    }
+  }
+
+  &::before {
+    aspect-ratio: 445/770;
+    width: 100%;
+    height: auto;
+    background-image: url('../images/decor/info2.svg');
+    max-width: 445px;
+    left: 0;
+    bottom: 22%;
+
+    @include adpt ($big-r) {
+      left: -240px;
+    }
+
+    @include adpt ($tab-r) {
+      left: -140px;
+      max-width: 300px;
+      bottom: 30%;
+    }
+
+    @include adpt ($bmob-r) {
+      bottom: 42%;
+      max-width: 290px;
+    }
+  }
+
+
+  &__list {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      padding-bottom: 49px;
+      margin-bottom: 50px;
+      border-bottom: 1px solid $grey;
+
+      @include adpt ($bmob-r) {
+        padding-bottom: 29px;
+        margin-bottom: 30px;
+      }
+    }
+
+    &:last-child {
+      padding-bottom: 114px;
+      border-bottom: 1px solid $grey;
+
+      @include adpt ($stab-r) {
+        padding-bottom: 49px;
+      }
+
+      @include adpt ($bmob-r) {
+        padding-bottom: 29px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    max-width: 848px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+
+    @include adpt ($stab-r) {
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+    }
+
+    &._1 {
+      & .information__text-wrap {
+        @include adpt ($stab-r) {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    &._2 {
+      grid-template-columns: minmax(380px, 410px) 1fr;
+
+      @include adpt ($stab-r) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &._3 {
+      grid-gap: 35px;
+      align-items: center;
+
+      @include adpt ($stab-r) {
+        grid-gap: 50px;
+      }
+    }
+  }
+
+  &__text-inner {
+    & p {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+
+      @include adpt ($stab-r) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__text-wrap {
+    padding: 20px 30px;
+    border-radius: 20px;
+    border: 1px solid $grey;
+
+    @include adpt ($mtab-r) {
+      padding: 20px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+
+      @include adpt ($stab-r) {
+        margin-bottom: 0;
+      }
+    }
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+
+    & p:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text-title {
+    margin-bottom: 10px;
+  }
+
+  &__info {
+    position: relative;
+    margin-top: 30px;
+    padding: 40px 30px 40px 210px;
+    border-radius: 20px;
+    background-color: $yellowLight;
+    box-shadow: 4px 4px 10px 0px rgba(107, 128, 137, 0.30);
+
+    @include adpt ($mtab-r) {
+      padding: 30px 20px 30px 90px;
+    }
+  }
+
+  &__info-bg {
+    position: absolute;
+    left: 30px;
+    top: -82px;
+
+    @include adpt ($mtab-r) {
+      width: 80px;
+      height: 150px;
+      left: 0;
+      top: -20px;
+    }
+  }
+
+  &__item-item {
+    padding-left: 34px;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url(../images/icon/check.svg);
+    }
+  }
+
+  &__edu {
+    display: flex;
+    align-items: center;
+
+    @include adpt ($bmob-r) {
+      flex-direction: column;
+    }
+  }
+
+  &__edu-text {
+    margin-right: 30px;
+    flex: 1;
+    max-width: 550px;
+
+    @include adpt ($bmob-r) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__edu-img-wrap {
+    flex: 1;
+    max-width: 400px;
+
+    @include adpt ($bmob-r) {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &__edu-img {
+    width: 100%;
+    pointer-events: none;
+    height: auto;
+    object-fit: contain;
+  }
+
+  &__quote {
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid $grey;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      background-color: $greenLight;
+      top: 5px;
+      z-index: -1;
+      left: 5px;
+    }
+  }
+
+  &__quote-inner {
+    padding: 40px 30px;
+    position: relative;
+
+    @include adpt ($bmob-r) {
+      padding: 20px;
+
+      & .text-bold {
+        font-size: 18px;
+      }
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 50px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url('../images/icon/quote.svg');
+
+      @include adpt ($stab-r) {
+        width: 40px;
+        height: 33px;
+      }
+    }
+
+    &::after {
+      transform: rotate(180deg);
+      bottom: -34px;
+      right: 15px;
+
+      @include adpt ($stab-r) {
+        right: 25px;
+        bottom: -15px;
+      }
+    }
+
+    &::before {
+      left: 20px;
+      top: -20px;
+    }
+  }
+
+  &__quote-img {
+    position: absolute;
+    left: 20px;
+    bottom: -64px;
+    object-fit: contain;
+
+    @include adpt ($stab-r) {
+      width: 50px;
+      height: 50px;
+      left: 0;
+      bottom: -30px;
+    }
+  }
+}

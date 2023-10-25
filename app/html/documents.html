@@ -1,0 +1,180 @@
+@include('components/_head.html')
+
+@include('components/_header.html')
+
+<main class="main">
+
+  <div class="breadcrumbs">
+
+    <div class="container">
+
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a href="#">
+            Главная
+          </a>
+        </li>
+        <li class="breadcrumbs__item">
+          <span>
+            Документы и лицензии
+          </span>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <section class="promo-page _documents">
+    <div class="container">
+      <div class="_h1 promo-page__title">
+        Документы и лицензии
+      </div>
+      <div class="promo-page__bg-wrap ">
+        <img class="promo-page__img" src="images/image_documents.svg" alt="image_documents.svg">
+      </div>
+    </div>
+  </section>
+
+  <section class="documents">
+    <div class="container">
+      <ul class="documents__list">
+        <li class="documents__item">
+          <a class="documents__item-link popup--link" href="#doc1">
+            <div class="documents__top text-bold">
+              Свидетельство о государственной аккредитации
+            </div>
+            <div class="documents__link">
+              Смотреть
+            </div>
+          </a>
+        </li>
+        <li class="documents__item">
+          <a class="documents__item-link popup--link" href="#doc1">
+            <div class="documents__top text-bold">
+              Лицензия на осуществление образовательной деятельности
+            </div>
+            <div class="documents__link">
+              Смотреть
+            </div>
+          </a>
+        </li>
+        <li class="documents__item">
+          <a class="documents__item-link popup--link" href="#doc1">
+            <div class="documents__top text-bold">
+              Публичный договор-офера
+            </div>
+            <div class="documents__link">
+              Смотреть
+            </div>
+          </a>
+        </li>
+        <li class="documents__item">
+          <a class="documents__item-link popup--link" href="#doc1">
+            <div class="documents__top text-bold">
+              Пользовательское соглашение
+            </div>
+            <div class="documents__link">
+              Смотреть
+            </div>
+          </a>
+        </li>
+        <li class="documents__item">
+          <a class="documents__item-link popup--link" href="#doc1">
+            <div class="documents__top text-bold">
+              Политика конфиденциальности
+            </div>
+            <div class="documents__link">
+              Смотреть
+            </div>
+          </a>
+        </li>
+        <li class="documents__item">
+          <a class="documents__item-link popup--link" href="#doc1">
+            <div class="documents__top text-bold">
+              Договор оплаты и возврата денежных средств
+            </div>
+            <div class="documents__link">
+              Смотреть
+            </div>
+          </a>
+        </li>
+        <li class="documents__item">
+          <a class="documents__item-link" download href="#doc1">
+            <div class="documents__top text-bold">
+              Образец заявления о переходе на СО
+            </div>
+            <div class="documents__link">
+              Скачать
+            </div>
+          </a>
+        </li>
+        <li class="documents__item">
+          <a class="documents__item-link" download href="#doc1">
+            <div class="documents__top text-bold">
+              Образец заявления о смене формы обучения
+            </div>
+            <div class="documents__link">
+              Скачать
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <section class="call">
+    <div class="container">
+      <div class="call__title _h2">
+        Не нашли информацию?
+      </div>
+      <form class="call__inner">
+        <div class="call__text">
+          Заполните форму ниже и с вами оперативно свяжется наш опытный консультант. В ходе беседы мы подробно ответим
+          на все вопросы, касающиеся оформления документов и других нюансов перехода на семейное образование. Звонки
+          проводятся с 8:00 до 20:00 в будние дни.
+        </div>
+        <div class="form">
+          <div class="form__row">
+            <div class="form__inputs">
+              <div class="input">
+                <input class="input__input" type="text" placeholder="Ваше имя" name="name">
+              </div>
+            </div>
+            <div class="form__inputs">
+              <div class="input">
+                <input class="input__input tel" type="tel" placeholder="Номер телефона" name="phone">
+              </div>
+            </div>
+            <div class="form__inputs">
+              <div class="input">
+                <select class="input__input _select js-select" name="connection"
+                  data-placeholder="Как с вами связаться?">
+                  <option></option>
+                  <option value="phone">Телефон </option>
+                  <option value="WhatsApp ">WhatsApp </option>
+                  <option value="Telegram ">Telegram </option>
+                </select>
+              </div>
+            </div>
+            <button class="form__btn btn btn_4" type="submit">
+              Отправить
+            </button>
+          </div>
+
+        </div>
+        <div class="form__policy call__policy">
+          <span>Нажимая кнопку, вы соглашаетесь </span><a href="#">на&nbsp;обработку своих персональных данных</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+@include('components/_footer.html')
+@include('components/_popup.html')
+@include('components/_doc1.html')
+
+@include('components/_footer-scripts.html')

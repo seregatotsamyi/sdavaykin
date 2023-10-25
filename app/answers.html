@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School - разработка https://moskalevs.ru/</title>
+  <link rel="stylesheet" href="libs/slick.css">
+  <link rel="stylesheet" href="libs/jquery.formstyler.css">
+  <link rel="stylesheet" href="libs/jquery.formstyler.theme.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="body" id="body">
+
+<header class="header">
+
+  <div class="container">
+
+    <div class="header__inner">
+
+      <div class="header__logo-wrap">
+        <a class="header__logo logo" href="#">
+          <img class="logo__img" src="images/logo.svg" alt="logo" width="260" height="80">
+        </a>
+      </div>
+
+      <div class="header__right-wrap">
+
+        <div class="header__nav-wrap">
+          <nav class="header__nav menu">
+            <button class="header__burger header__burger_close  js-toggle-menu" type="button">
+              <img class="burger__img" src="images/icon/burger-menu-close.svg" alt="burger" width="40" height="40">
+              <span class="sr-only">Закрыть мобильное меню</span>
+            </button>
+            <ul class="menu__list">
+
+              <li class="menu__item">
+
+                <div class="menu__item-top">
+
+                  <a class="menu__link _arrow" href="#">
+                    Классы
+                  </a>
+
+                  <div class="menu__sublist-wrap">
+                    <ul class="menu__sublist">
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="1 класс">
+                          1 класс
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="2 класс">
+                          2 класс
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="3 класс">
+                          3 класс
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="4 класс">
+                          4 класс
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="5 класс">
+                          5 класс
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="6 класс">
+                          6 класс
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="7 класс">
+                          7 класс
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="8 класс">
+                          8 класс
+                        </a>
+                      </li>
+
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="9 класс">
+                          9 класс
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="10 класс">
+                          10 класс
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="11 класс">
+                          11 класс
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+              </li>
+
+              <li class="menu__item">
+
+                <div class="menu__item-top">
+                  <a class="menu__link" href="#">
+                    Контакты
+
+                  </a>
+                </div>
+              </li>
+
+              <li class="menu__item">
+
+                <div class="menu__item-top">
+
+                  <a class="menu__link _arrow" href="#">
+                    Родителям
+                  </a>
+
+                  <div class="menu__sublist-wrap _second">
+                    <ul class="menu__sublist">
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text=" Документы и лицензии">
+                          Документы и лицензии
+
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="Вопрос-ответ">
+                          Вопрос-ответ
+
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="Блог">
+                          Блог
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="Новости">
+                          Новости
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="Информация о СО">
+                          Информация о СО
+                        </a>
+                      </li>
+                      <li class="menu__subitem">
+                        <a class="menu__sublink" href="#" data-text="ЕГЭ/ОГЭ">
+                          ЕГЭ/ОГЭ
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+
+              </li>
+            </ul>
+            <a class="menu__btn btn popup--link" href="#feedback">
+              Отправить заявку
+            </a>
+          </nav>
+        </div>
+
+        <div class="header__phone">
+          <a class="header__phone-link text-bold" href="tel:89005555555">
+            8 900 555 55 55
+          </a>
+          <span class="header__schedule">
+            c 8:00 до 20:00
+          </span>
+        </div>
+
+        <button class="header__burger  js-toggle-menu" type="button">
+          <img class="burger__img" src="images/icon/burger-menu.svg" alt="burger" width="40" height="40">
+          <span class="sr-only">Открыть мобильное меню</span>
+        </button>
+
+        <a class="header__btn btn popup--link" href="#feedback">
+          Отправить заявку
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+<main class="main">
+
+  <div class="breadcrumbs">
+
+    <div class="container">
+
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a href="#">
+            Главная
+          </a>
+        </li>
+        <li class="breadcrumbs__item">
+          <span>
+            Вопрос-ответ
+          </span>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <section class="promo-page _answers">
+    <div class="container">
+      <div class="_h1 promo-page__title">
+        Популярные вопросы
+      </div>
+      <div class="promo-page__bg-wrap ">
+        <img class="promo-page__img" src="images/img_faq.svg" alt="img_faq.svg">
+      </div>
+    </div>
+  </section>
+
+  <section class="answers">
+    <div class="container">
+      <ul class="answers__list">
+        <li class="answers__item">
+          <div class="answers__quest text-bold">
+            1. Какие учебные материалы предоставляет сервис «Сдавайкин»?
+          </div>
+          <div class="answers__answers">
+            После регистрации и оплаты мы открываем доступ к соответствующим учебным курсам. Прежде всего, они включают
+            список тем, которые предстоит усвоить ученику. В ходе первого урока даётся их полный перечень на весь
+            учебный год и примерный объём знаний, необходимый для успешного прохождения аттестации. Ребёнок может
+            учиться по материалам, которые созданы по каждой теме. Также ученик получает доступ к заданиям
+            для тренировок. Пособия и тренинги составлены максимально понятно и обычно не вызывают недопонимания.
+            Если все же возникают вопросы, дети и родители могут задать их в любой момент, а также уточнить
+            организационные нюансы.
+          </div>
+        </li>
+        <li class="answers__item">
+          <div class="answers__quest text-bold">
+            2. Как проводятся дистанционные промежуточные аттестации?
+          </div>
+          <div class="answers__answers">
+            Дети тестируются в онлайн-режиме без использования следящих веб-камер и с достаточным запасом времени. На
+            аттестацию по каждому предмету выделяется от 6 до 8 ч. Ребенок может выбрать для прохождения проверки любую
+            дату. Если итоги экзаменов кажутся неуспешными, их можно пересдать, причем доплачивать за это на сервисе
+            «Сдавайкин» не требуется. После нескольких попыток аттестации в личное дело вносится наилучший результат.
+          </div>
+        </li>
+        <li class="answers__item">
+          <div class="answers__quest text-bold">
+            3. Кто проверяет задания промежуточных тестирований?
+          </div>
+          <div class="answers__answers">
+            Все тестовые задания оцениваются автоматической системой. Это исключает субъективный подход со стороны
+            учителя-предметника, который может иметь место в обычной школе. Итог аттестации отображается в личном
+            кабинете. При несогласии с результатом родители имеют возможность уточнить детали и настоять на
+            перепроверке. После ее проведения мы подробно разъясним, из чего сложился полученный балл и раскроем
+            правильные ответы. Благодаря прозрачности такой системы претензий к оцениванию, как правило, не возникает.
+          </div>
+        </li>
+        <li class="answers__item">
+          <div class="answers__quest text-bold">
+            4. Выдаются ли документы о прохождении промежуточных аттестаций?
+          </div>
+          <div class="answers__answers">
+            Разумеется. По окончании проверки тестовых заданий результаты передаются в школу-партнер с государственной
+            аккредитацией. Она формирует официальные справки, копии которых загружаются в личный кабинет ребенка на
+            портале «Сдавайкин». Здесь же можно заказать пересылку в адрес родителей оригинальных справок, если для
+            предъявления в инстанциях нужны «бумажные» документы.
+          </div>
+        </li>
+        <li class="answers__item">
+          <div class="answers__quest text-bold">
+            5. К какой школе прикрепляется ребенок для сдачи ОГЭ/ЕГЭ?
+          </div>
+          <div class="answers__answers">
+            Платформа «Сдавайкин» сотрудничает с московской СОШ «Пенаты». Ребенок, пребывающий на семейном образовании,
+            числится в контингенте этой школы, получает от нее справки о сдаче промежуточных аттестаций. Это позволяет
+            вести правильный документооборот и, в конечном счете – получить допуск к ОГЭ или ЕГЭ. Немаловажно, что
+            личное дело с оценками СОШ «Пенаты» позволяет в любой момент вернуться к очному обучению в обычной школе. У
+            родителей наших учеников нет необходимости лично приезжать в школу-партнер: передача документов ведется
+            через личный кабинет на портале «Сдавайкин».
+          </div>
+        </li>
+        <li class="answers__item">
+          <div class="answers__quest text-bold">
+            6. Какие документы нужны для прохождения ОГЭ?
+          </div>
+          <div class="answers__answers">
+            Для допуска к итоговой аттестации за 9 класс требуются два главных документа. Во-первых, паспорт школьника
+            (или свидетельство о рождении). Во-вторых, справка об успешном прохождении промежуточных аттестаций по
+            базовым дисциплинам. Учеба на платформе «Сдавайкин» обеспечивает получение подобной справки и, что не менее
+            важно – позволяет обрести знания для успешного прохождения итоговой аттестации!
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <section class="call">
+    <div class="container">
+      <div class="call__title _h2">
+        Ответим на ваши вопросы?
+      </div>
+      <form class="call__inner">
+        <div class="call__text">
+          Заполните форму ниже и с вами оперативно свяжется наш опытный консультант. В ходе беседы мы подробно ответим
+          на все вопросы, касающиеся оформления документов и других нюансов перехода на семейное образование. Звонки
+          проводятся с 8:00 до 20:00 в будние дни.
+        </div>
+        <div class="form">
+          <div class="form__row">
+            <div class="form__inputs">
+              <div class="input">
+                <input class="input__input" type="text" placeholder="Ваше имя" name="name">
+              </div>
+            </div>
+            <div class="form__inputs">
+              <div class="input">
+                <input class="input__input tel" type="tel" placeholder="Номер телефона" name="phone">
+              </div>
+            </div>
+            <div class="form__inputs">
+              <div class="input">
+                <select class="input__input _select js-select" name="connection"
+                  data-placeholder="Как с вами связаться?">
+                  <option></option>
+                  <option value="phone">Телефон </option>
+                  <option value="WhatsApp ">WhatsApp </option>
+                  <option value="Telegram ">Telegram </option>
+                </select>
+              </div>
+            </div>
+            <button class="form__btn btn btn_4" type="submit">
+              Отправить
+            </button>
+          </div>
+
+        </div>
+        <div class="form__policy call__policy">
+          <span>Нажимая кнопку, вы соглашаетесь </span><a href="#">на&nbsp;обработку своих персональных данных</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+
+  <div class="footer__inner-wrap">
+
+    <div class="container">
+
+      <picture>
+        <source media="(max-width: 768px)" srcset="images/decor/footer-bg-mob.svg">
+        <source srcset="images/decor/footer-bg.svg">
+        <img class="footer__bg" src="images/decor/footer-bg.svg" alt="footer-bg.svg">
+      </picture>
+
+      <div class="footer__inner">
+        <div class="footer__left">
+          <a class="footer__logo logo" href="#">
+            <img class="logo__img" src="images/logo-2.svg" alt="logo" width="250" height="71">
+          </a>
+          <div class="footer__text-block">
+            <p>
+              ООО «Сдавайкин»
+            </p>
+            <p>
+              ИНН 00000000
+            </p>
+            <p>
+              ОГРН 000000000
+            </p>
+            <p>
+              Возрастной рейтинг 6+
+            </p>
+          </div>
+          <a class="footer__policy" href="#" data-text="Политика конфиденциальности">
+            Политика конфиденциальности
+          </a>
+        </div>
+        <div class="footer__grid">
+          <div class="footer__list-wrap _a">
+            <div class="footer__title text-bold">
+              Классы
+            </div>
+            <ul class="footer__list _two-column">
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="1 класс">
+                  1 класс
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="2 класс">
+                  2 класс
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="3 класс">
+                  3 класс
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="4 класс">
+                  4 класс
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="5 класс">
+                  5 класс
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="6 класс">
+                  6 класс
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="7 класс">
+                  7 класс
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="8 класс">
+                  8 класс
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="9 класс">
+                  9 класс
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="10 класс">
+                  10 класс
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="11 класс">
+                  11 класс
+                </a>
+              </li>
+
+            </ul>
+          </div>
+          <div class="footer__list-wrap _b">
+            <div class="footer__title text-bold">
+              Главная
+            </div>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="Документы и лицензии">
+                  Документы и лицензии
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="Вопрос-ответ">
+                  Вопрос-ответ
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="Блог">
+                  Блог
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="Новости">
+                  Новости
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="Информация о СО">
+                  Информация о СО
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#" data-text="ЕГЭ/ОГЭ">
+                  ЕГЭ/ОГЭ
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__list-wrap _c">
+            <div class="footer__title text-bold">
+              Контакты
+            </div>
+            <ul class="footer__links">
+              <li class="footer__links-item">
+                <a class="footer__links-link" href="tel:89005555555" data-text="8 900 555 55 55">
+                  8 900 555 55 55
+                </a>
+              </li>
+              <li class="footer__links-item">
+                <a class="footer__links-link" href="mailto:sdavaikin@mail.ru" data-text="sdavaikin@mail.ru">
+                  sdavaikin@mail.ru
+                </a>
+              </li>
+            </ul>
+            <div class="footer__social social">
+              <ul class="social__list">
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <img class="social__img" src="images/social/tg.svg" alt="social" width="26" height="21">
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <img class="social__img" src="images/social/wa.svg" alt="social" width="26" height="21">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__list-wrap _d">
+            <div class="footer__title text-bold">
+              Школа-партнер
+            </div>
+            <p class="footer__text">
+              ОАНО СОШ "Пенаты"
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+<div id="feedback" class="popup">
+  <div class="popup__body">
+    <div class="popup__content ">
+      <a href="#" class="popup__close popup--close">
+
+        <svg class="popup__close-img" width="40" height="40" viewBox="0 0 40 40" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g >
+            <path d="M24.9497 15.0503L15.0502 24.9498"  fill="white" stroke="white" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M15.0503 15.0503L24.9498 24.9498"  fill="white" stroke="white" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </g>
+        
+        </svg>
+
+      </a>
+
+      <form class="popup__inner">
+        <div class="popup__title">
+          Заполните форму и с вами свяжется менеджер.
+        </div>
+        <div class="popup__text">
+          Вы сможете задать любой вопрос о сдаче аттестации в «Сдавайкин». А также получить логин и пароль для доступа
+          в личный кабинет и начать регистрацию ребёнка на сервисе.
+        </div>
+        <div class="form">
+          <div class="form__row">
+            <div class="form__inputs">
+              <div class="input">
+                <input class="input__input" type="text" placeholder="Ваше имя" name="name">
+              </div>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__inputs">
+              <div class="input">
+                <input class="input__input tel" type="tel" placeholder="Номер телефона" name="phone">
+              </div>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__inputs">
+              <div class="input">
+                <select class="input__input _select js-select" name="connection"
+                  data-placeholder="Как с вами связаться?">
+                  <option></option>
+                  <option value="phone">Телефон </option>
+                  <option value="WhatsApp ">WhatsApp </option>
+                  <option value="Telegram ">Telegram </option>
+                </select>
+              </div>
+            </div>
+            <button class="form__btn btn btn_3" type="submit">
+              Отправить
+            </button>
+
+
+          </div>
+
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<script src="libs/jquery.min.js"></script>
+<script src="libs/jquery.formstyler.min.js"></script>
+<script src="libs/slick.min.js"></script>
+<script src="js/main.min.js"></script>
+</body>
+
+</html>

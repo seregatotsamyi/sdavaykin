@@ -16,7 +16,29 @@
     }
   }
 
+  &._answers {
+    & .promo-page__bg-wrap {
+      margin-top: -108px;
+
+      @include adpt ($tab-r) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &._documents {
+    & .promo-page__bg-wrap {
+      margin-top: -105px;
+
+      @include adpt ($tab-r) {
+        margin-top: 0;
+      }
+    }
+  }
+
   &__title {
+    position: relative;
+    z-index: 2;
     margin-bottom: 20px;
 
     @include adpt ($bmob-r) {

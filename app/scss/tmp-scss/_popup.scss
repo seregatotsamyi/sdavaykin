@@ -16,6 +16,28 @@
     visibility: visible;
   }
 
+  &._doc {
+    & .popup__body {
+      padding-top: 100px;
+
+      @include adpt ($bmob-r) {
+        padding: 35px 40px 35px 20px;
+      }
+    }
+
+    & .popup__content {
+      border-radius: 0;
+      padding: 0;
+      max-width: 630px;
+      background-color: transparent;
+    }
+
+    & .popup__close {
+      right: -40px;
+      top: 0;
+    }
+  }
+
   &__body {
     min-height: 100%;
     display: flex;
@@ -133,6 +155,22 @@
       color: $yellow;
       font-weight: 700;
       letter-spacing: -0.025em;
+    }
+  }
+
+  &__doc-inner {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__doc-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
     }
   }
 }

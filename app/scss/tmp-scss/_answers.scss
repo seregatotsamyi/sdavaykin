@@ -1,0 +1,80 @@
+.answers {
+  padding-bottom: 50px;
+
+  @include adpt ($bmob-r) {
+    padding-bottom: 25px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 50px;
+
+      @include adpt ($mtab-r) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &:nth-child(3n+3) {
+      & .answers__answers {
+        background-color: $yellowLight;
+      }
+    }
+
+    &:nth-child(3n+2) {
+      & .answers__answers {
+        background-color: $blueLight;
+      }
+    }
+
+    &:nth-child(3n+1) {
+      & .answers__answers {
+        background-color: $greenLight;
+      }
+    }
+  }
+
+  &__quest {
+    max-width: 653px;
+    padding: 40px 30px;
+    border-radius: 20px 20px 20px 0px;
+    border: 1px solid $grey;
+    position: relative;
+    z-index: 1;
+
+    @include adpt ($mtab-r) {
+      padding: 30px 20px;
+    }
+
+    @include adpt ($bmob-r) {
+      font-size: 18px;
+      padding: 20px;
+    }
+  }
+
+  &__answers {
+    position: relative;
+    padding: 40px 30px 40px 160px;
+    border-radius: 20px 20px 0px 20px;
+    box-shadow: 4px 4px 10px 0px rgba(107, 128, 137, 0.30);
+    margin-top: -20px;
+    z-index: 2;
+    max-width: 848px;
+    margin-left: auto;
+    background-size: 100px 100px;
+    background-position: 30px 40px;
+    background-repeat: no-repeat;
+    background-image: url('../images/icon/cats_icon.svg');
+
+    @include adpt ($mtab-r) {
+      margin-top: -10px;
+      background-position: 20px 30px;
+      margin-left: 10px;
+    }
+
+    @include adpt ($bmob-r) {
+      padding: 20px 20px 20px 60px;
+      background-size: 30px 30px;
+      background-position: 20px 20px;
+    }
+  }
+}

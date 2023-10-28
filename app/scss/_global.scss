@@ -200,3 +200,11 @@ body {
     font-size: 28px;
   }
 }
+
+.news-section {
+  margin-bottom: 100px;
+
+  @include adpt ($bmob-r) {
+    margin-bottom: 50px;
+  }
+}

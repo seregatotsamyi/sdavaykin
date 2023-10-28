@@ -1,13 +1,15 @@
 .blog {
   padding: 50px 0;
-  @include adpt ($bmob-r){
+
+  @include adpt ($bmob-r) {
     padding: 25px 0;
   }
 
   &__title {
     text-align: center;
     margin: 0 auto 50px;
-    @include adpt ($bmob-r){
+
+    @include adpt ($bmob-r) {
       margin-bottom: 20px;
     }
   }
@@ -15,7 +17,8 @@
   &__select {
     margin-bottom: 40px;
     max-width: 345px;
-    @include adpt ($bmob-r){
+
+    @include adpt ($bmob-r) {
       margin-bottom: 20px;
     }
 
@@ -31,7 +34,8 @@
   &__item-promo-top {
     position: relative;
     z-index: 2;
-    @include adpt ($bmob-r){
+
+    @include adpt ($bmob-r) {
       max-width: 300px;
       margin-bottom: 40px;
     }
@@ -41,13 +45,16 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px;
-    @include adpt ($tab-r){
+
+    @include adpt ($tab-r) {
       grid-gap: 10px;
     }
-    @include adpt ($stab-r){
+
+    @include adpt ($stab-r) {
       grid-template-columns: 1fr 1fr;
     }
-    @include adpt ($bmob-r){
+
+    @include adpt ($bmob-r) {
       grid-template-columns: 1fr;
     }
   }
@@ -72,7 +79,8 @@
 
   &__item-promo-title {
     margin-bottom: 20px;
-    @include adpt ($tab-r){
+
+    @include adpt ($tab-r) {
       font-size: 28px;
     }
   }

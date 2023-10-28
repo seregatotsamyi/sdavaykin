@@ -856,7 +856,7 @@
       <div class="preparation__text text-bold">
         Хотите попробовать онлайн-сдачу аттестации на практике? Мы откроем вам доступ к обучающим материалам на 3 дня
       </div>
-      <a class="preparation__btn btn btn_3" href="#">
+      <a class="preparation__btn btn btn_3 popup--link" href="#access">
         Получить доступ
       </a>
     </div>
@@ -1423,6 +1423,72 @@
 
 
       </div>
+
+    </div>
+  </div>
+</div>
+<div id="access" class="popup">
+  <div class="popup__body">
+    <div class="popup__content ">
+      <a href="#" class="popup__close popup--close">
+
+        <svg class="popup__close-img" width="40" height="40" viewBox="0 0 40 40" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g>
+            <path d="M24.9497 15.0503L15.0502 24.9498" fill="white" stroke="white" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M15.0503 15.0503L24.9498 24.9498" fill="white" stroke="white" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </g>
+
+        </svg>
+
+      </a>
+
+      <form class="popup__inner">
+        <div class="popup__title">
+          Открыть доступ к аттестации на 3 дня
+        </div>
+        <div class="popup__text">
+          Вы оцените личный кабинет, объём/структуру обучающего материала, ознакомитесь с нормативами по каждому
+          предмету и  потренируетесь выполнять тесты
+        </div>
+        <div class="form">
+          <div class="form__row">
+            <div class="form__inputs">
+              <div class="input">
+                <input class="input__input" type="text" placeholder="Ваше имя" name="name">
+              </div>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__inputs">
+              <div class="input">
+                <input class="input__input tel" type="tel" placeholder="Номер телефона" name="phone">
+              </div>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__inputs">
+              <div class="input">
+                <select class="input__input _select js-select" name="connection"
+                  data-placeholder="Как с вами связаться?">
+                  <option></option>
+                  <option value="phone">Телефон </option>
+                  <option value="WhatsApp ">WhatsApp </option>
+                  <option value="Telegram ">Telegram </option>
+                </select>
+              </div>
+            </div>
+            <button class="form__btn btn btn_3" type="submit">
+              Отправить
+            </button>
+
+
+          </div>
+
+        </div>
+      </form>
 
     </div>
   </div>

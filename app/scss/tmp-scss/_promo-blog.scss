@@ -1,0 +1,50 @@
+.promo-blog {
+  padding: 50px 0;
+
+  @include adpt ($bmob-r) {
+    padding: 25px 0;
+  }
+
+  &__title-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+
+    @include adpt ($stab-r) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    margin-right: 30px;
+
+    @include adpt ($stab-r) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+
+    @include adpt ($tab-r) {
+      grid-gap: 10px;
+    }
+
+    @include adpt ($stab-r) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include adpt ($bmob-r) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -4,6 +4,8 @@
   grid-gap: 20px;
 
 
+
+
   &__row {
     display: flex;
     align-items: center;
@@ -49,6 +51,9 @@
 
   &__btn {
     padding: 9px 30px;
+    &._public{
+      margin: 0 auto;
+    }
   }
 
 }

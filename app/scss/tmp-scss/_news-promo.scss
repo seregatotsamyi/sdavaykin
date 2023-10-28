@@ -1,0 +1,30 @@
+.news-promo {
+  margin-bottom: 100px;
+
+  @include adpt ($bmob-r) {
+    margin-bottom: 50px;
+  }
+
+  &__title-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 30px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__link {
+    background-color: $blueLight;
+    border-color: $blueLight;
+    color: $grey;
+
+    @include adpt ($bmob-r) {
+      margin-top: 20px;
+    }
+  }
+}

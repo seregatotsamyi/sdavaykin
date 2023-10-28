@@ -1,0 +1,102 @@
+.blog {
+  padding: 50px 0;
+  @include adpt ($bmob-r){
+    padding: 25px 0;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 auto 50px;
+    @include adpt ($bmob-r){
+      margin-bottom: 20px;
+    }
+  }
+
+  &__select {
+    margin-bottom: 40px;
+    max-width: 345px;
+    @include adpt ($bmob-r){
+      margin-bottom: 20px;
+    }
+
+    & .input .jq-selectbox__select {
+      background-color: $yellowLight;
+    }
+
+    & .input .jq-selectbox__dropdown {
+      background-color: $yellowLight;
+    }
+  }
+
+  &__item-promo-top {
+    position: relative;
+    z-index: 2;
+    @include adpt ($bmob-r){
+      max-width: 300px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    @include adpt ($tab-r){
+      grid-gap: 10px;
+    }
+    @include adpt ($stab-r){
+      grid-template-columns: 1fr 1fr;
+    }
+    @include adpt ($bmob-r){
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__btn {
+    margin-top: 30px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__item-promo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background-color: $yellowLight;
+    padding: 40px 30px;
+    border-radius: 20px;
+  }
+
+  &__item-promo-title {
+    margin-bottom: 20px;
+    @include adpt ($tab-r){
+      font-size: 28px;
+    }
+  }
+
+  &__item-promo-text {
+    margin-bottom: 20px;
+
+    & p {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__item-link {
+    position: relative;
+    z-index: 2;
+    align-self: flex-start;
+  }
+
+  &__item-promo-img {
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    right: 10px;
+  }
+}

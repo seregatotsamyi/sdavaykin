@@ -35,6 +35,15 @@
       }
     }
   }
+  &._blog {
+    & .promo-page__bg-wrap {
+      margin-top: -105px;
+
+      @include adpt ($tab-r) {
+        margin-top: -10px;
+      }
+    }
+  }
 
   &._information {
     & .promo-page__bg-wrap {

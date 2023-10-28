@@ -1,0 +1,23 @@
+.blog-promo {
+  &__top {
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+
+    @include adpt ($tab-r) {
+      margin-bottom: 50px;
+      grid-gap: 10px;
+    }
+
+    @include adpt ($mtab-r) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include adpt ($bmob-r) {
+      grid-template-columns: 1fr;
+      margin-bottom: 58px;
+    }
+  }
+
+}

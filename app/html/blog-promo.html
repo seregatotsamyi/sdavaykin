@@ -1,0 +1,202 @@
+@include('components/_head.html')
+
+@include('components/_header.html')
+
+<main class="main">
+
+  <div class="breadcrumbs">
+
+    <div class="container">
+
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a href="#">
+            Главная
+          </a>
+        </li>
+        <li class="breadcrumbs__item">
+          <span>
+            Блог
+          </span>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+  <section class="promo-page _blog">
+    <div class="container">
+      <div class="_h1 promo-page__title">
+        Блог и новости
+      </div>
+      <div class="promo-page__bg-wrap ">
+        <img class="promo-page__img" src="images/img_blog.svg" alt="img_blog.svg">
+      </div>
+    </div>
+  </section>
+
+
+  <section class="blog-promo">
+    <div class="container">
+      <div class="blog-promo__top">
+        <div class="blog-item">
+          <a class="blog-item__link" href="#">
+            <div class="blog-item__top">
+              <div class="blog-item__img-wrap">
+                <img class="blog-item__img" src="images/blog/1.jpg" alt="">
+              </div>
+
+              <div class="blog-item__title text-bold">
+                Как создать гибкое расписание для семейного обучения
+              </div>
+              <div class="blog-item__discr">
+                Рассказываем как организовать учебный день ребенку без стресса и вреда для здоровья
+              </div>
+            </div>
+            <div class="blog-item__bottom-wrap">
+              <div class="blog-item__bottom">
+                <div class="blog-item__cat">
+                  Полезно
+                </div>
+                <div class="blog-item__view">
+                  25
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="blog-item">
+          <a class="blog-item__link" href="#">
+            <div class="blog-item__top">
+              <div class="blog-item__img-wrap">
+                <img class="blog-item__img" src="images/blog/1.jpg" alt="">
+              </div>
+
+              <div class="blog-item__title text-bold">
+                Основные принципы обучения детей дома
+              </div>
+              <div class="blog-item__discr">
+                Правила грамотной организации учебы дома
+              </div>
+            </div>
+            <div class="blog-item__bottom-wrap">
+              <div class="blog-item__bottom">
+                <div class="blog-item__cat">
+                  Полезно
+                </div>
+                <div class="blog-item__view">
+                  8
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="blog-item">
+          <a class="blog-item__link" href="#">
+            <div class="blog-item__top">
+              <div class="blog-item__img-wrap">
+                <img class="blog-item__img" src="images/blog/1.jpg" alt="">
+              </div>
+
+              <div class="blog-item__title text-bold">
+                Использование технологий в семейном обучении
+              </div>
+              <div class="blog-item__discr">
+                Поможем выбрать технику для комфортного получения знаний. Подскажем, на что обращать внимание при выборе
+              </div>
+            </div>
+
+            <div class="blog-item__bottom-wrap">
+              <div class="blog-item__bottom">
+                <div class="blog-item__cat">
+                  Полезно
+                </div>
+                <div class="blog-item__view">
+                  158
+                </div>
+              </div>
+            </div>
+
+          </a>
+        </div>
+      </div>
+      <div class="news-promo">
+
+      </div>
+    </div>
+  </section>
+
+  <section class="preparation">
+    <div class="container">
+      <div class="preparation__inner">
+        <img class="preparation__img" src="images/decor/preparation.svg" alt="preparation" width="387" height="309">
+        <div class="preparation__title _h2">
+          Подготовьтесь к аттестации бесплатно
+        </div>
+        <div class="preparation__text text-bold">
+          Хотите попробовать онлайн-сдачу аттестации на практике? Мы откроем вам доступ к обучающим материалам на 3 дня
+        </div>
+        <a class="preparation__btn btn btn_3 popup--link" href="#access">
+          Получить доступ
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="call ">
+    <div class="container">
+      <div class="call__title _h2">
+        Сдавайте аттестацию с нами
+      </div>
+      <form class="call__inner">
+        <div class="call__text">
+          Заполните форму ниже и с вами оперативно свяжется наш опытный консультант. В ходе беседы мы подробно ответим
+          на все вопросы, касающиеся оформления документов и других нюансов перехода на семейное образование. Звонки
+          проводятся с 8:00 до 20:00 в будние дни.
+        </div>
+        <div class="form">
+          <div class="form__row">
+            <div class="form__inputs">
+              <div class="input">
+                <input class="input__input" type="text" placeholder="Ваше имя" name="name">
+              </div>
+            </div>
+            <div class="form__inputs">
+              <div class="input">
+                <input class="input__input tel" type="tel" placeholder="Номер телефона" name="phone">
+              </div>
+            </div>
+            <div class="form__inputs">
+              <div class="input">
+                <select class="input__input _select js-select" name="connection"
+                  data-placeholder="Как с вами связаться?">
+                  <option></option>
+                  <option value="phone">Телефон </option>
+                  <option value="WhatsApp ">WhatsApp </option>
+                  <option value="Telegram ">Telegram </option>
+                </select>
+              </div>
+            </div>
+            <button class="form__btn btn btn_4" type="submit">
+              Отправить
+            </button>
+          </div>
+
+        </div>
+        <div class="form__policy call__policy">
+          <span>Нажимая кнопку, вы соглашаетесь </span><a href="#">на&nbsp;обработку своих персональных данных</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+@include('components/_footer.html')
+@include('components/_popup.html')
+@include('components/_doc1.html')
+@include('components/_access.html')
+
+@include('components/_footer-scripts.html')

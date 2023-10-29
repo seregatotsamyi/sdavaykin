@@ -258,4 +258,89 @@ $(function () {
 
   $('.js-select').styler();
 
+  //js-form
+  let validation = (nameInput, phoneInput, connectionInput) => {
+    let result = 1
+
+    if (phoneInput.val().length !== 18) {
+      phoneInput.addClass("_error")
+      result = 0
+    } else {
+      phoneInput.removeClass("_error")
+    }
+
+    if (connectionInput.val() !== "") {
+      connectionInput.next().removeClass("_error")
+    } else {
+      result = 0
+      connectionInput.next().addClass("_error")
+    }
+    const reg = /[а-яА-ЯЁё/ ]+/gm
+
+    if (reg.test(nameInput.val())) {
+      nameInput.removeClass("_error")
+    } else {
+      result = 0
+      nameInput.addClass("_error")
+    }
+
+
+    return result
+  }
+
+  $('.js-form').on('submit', function (event) {
+
+    event.preventDefault();
+    let formData = $(this).serialize();
+
+    let send = () => {
+      $.ajax({
+        url: 'mail.php',
+        method: 'POST',
+        data: formData,
+        dataType: 'json',
+        encoding: true,
+        success: response => {
+          if (response == 1) {
+            $('.js-form').each(function () {
+              $(this)[0].reset();
+              popupClose(document.querySelector('.popup.open'));
+              const thankPopUp = document.getElementById("popupThank")
+              popupOpen(thankPopUp);
+              console.log(thankPopUp)
+            });
+          } else {
+            alert('Произошла ошибка');
+          }
+        },
+        error: function (jqXHR, exception) {
+          if (jqXHR.status === 0) {
+            alert('Not connect. Verify Network.');
+          } else if (jqXHR.status == 404) {
+            alert('Requested page not found (404).');
+          } else if (jqXHR.status == 500) {
+            alert('Internal Server Error (500).');
+          } else if (exception === 'parsererror') {
+            alert('Requested JSON parse failed.');
+          } else if (exception === 'timeout') {
+            alert('Time out error.');
+          } else if (exception === 'abort') {
+            alert('Ajax request aborted.');
+          } else {
+            alert('Uncaught Error. ' + jqXHR.responseText);
+          }
+        }
+      });
+    }
+
+    let nameInput = $(this).find('input[name="name"]')
+    let phoneInput = $(this).find('input[name="phone"]')
+    let connectionInput = $(this).find('select[name="connection"]')
+
+    if (validation(nameInput, phoneInput, connectionInput)) {
+      send()
+    }
+
+  })
+
 });

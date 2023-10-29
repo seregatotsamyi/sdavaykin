@@ -34,6 +34,21 @@
 
       }
     }
+
+    &._textarea {
+      resize: vertical;
+      min-height: 40px;
+
+      @include adpt ($bmob-r) {
+        min-height: 74px;
+      }
+    }
+
+    &._error {
+      border-color: #da2a2a;
+      box-shadow: 4px 4px 10px 0px rgba(245, 53, 5, 0.3);
+      color: #da2a2a;
+    }
   }
 
   & .jq-selectbox__select {
@@ -48,6 +63,11 @@
     color: $grey;
     text-shadow: none;
     transition: all 0.3s;
+
+    &._error {
+      color: #da2a2a;
+      box-shadow: 4px 4px 10px 0px rgba(245, 53, 5, 0.3);
+    }
   }
 
   & .jq-selectbox .placeholder {
@@ -125,4 +145,5 @@
       line-height: 1.8;
     }
   }
+
 }

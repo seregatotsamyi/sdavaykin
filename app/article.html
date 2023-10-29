@@ -425,7 +425,84 @@
             </p>
           </div>
           <div class="article__social">
-
+            <span class="article__social-text">
+              Поделиться статьей:
+            </span>
+            <div class="article__social-wrap social">
+              <ul class="social__list">
+    
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <img class="social__img" src="images/social/wa.svg" alt="social" width="26" height="21">
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <img class="social__img" src="images/social/link.svg" alt="social" width="26" height="21">
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <img class="social__img" src="images/social/tg.svg" alt="social" width="26" height="21">
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a class="social__link" href="#">
+                    <img class="social__img" src="images/social/vk.svg" alt="social" width="26" height="21">
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="article__comments">
+            <div class="article__comments-title _h2">
+              Комментарии:
+            </div>
+            <ul class="article__comments-list">
+              <li class="article__comments-item">
+                <div class="article__comments-author text-bold">
+                  Крюкова Ирина
+                </div>
+                <div class="article__comments-text">
+                  Статья очень информативна и объективна. Я узнала много нового о том, какие преимущества и недостатки имеет такой тип обучения. Текст понятно структурирован и легко читается.
+                </div>
+              </li>
+              <li class="article__comments-item">
+                <div class="article__comments-author text-bold">
+                  Кравцов Артем
+                </div>
+                <div class="article__comments-text">
+                  Статья дает хороший обзор о том, как дистанционное обучение может быть полезно для тех, кто не имеет возможности посещать традиционные учебные заведения. Я узнал, что дистанционное обучение может быть очень удобным и эффективным, если его правильно использовать. Эта статья дает мне много новых идей о том, как я могу улучшить процесс дистанционного обучения в жизни ребенка.
+                </div>
+              </li>
+            </ul>
+            <form class="article__comments-form">
+              <div class="article__comments-form-title text-bold">
+                Напишите комментарий
+              </div>
+              <div class="form">
+                <div class="form__row">
+                  <div class="form__inputs">
+                    <div class="input">
+                      <input class="input__input" type="text" placeholder="Ваше имя и фамилия" name="name">
+                    </div>
+                  </div>
+                </div>
+                <div class="form__row">
+                  <div class="form__inputs">
+                    <div class="input">
+                      <textarea class="input__input _textarea" rows="1" type="text" placeholder="Комментарий" name="comment"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__row">
+                  <button class="form__btn btn btn_4" type="submit">
+                    Отправить
+                  </button>
+                </div>
+              </div>
+              
+            </form>
           </div>
         </div>
         <div class="article__aside">
@@ -442,6 +519,7 @@
           </div>
         </div>
       </div>
+  
 
     </div>
   </section>
@@ -544,13 +622,13 @@
       <div class="call__title _h2">
         Сдавайте аттестацию с нами
       </div>
-      <form class="call__inner">
+      <form class="call__inner js-form">
         <div class="call__text">
           Заполните форму ниже и с вами оперативно свяжется наш опытный консультант. В ходе беседы мы подробно ответим
           на все вопросы, касающиеся оформления документов и других нюансов перехода на семейное образование. Звонки
           проводятся с 8:00 до 20:00 в будние дни.
         </div>
-        <div class="form">
+        <div class="form ">
           <div class="form__row">
             <div class="form__inputs">
               <div class="input">
@@ -790,7 +868,7 @@
 
       </a>
 
-      <form class="popup__inner">
+      <form class="popup__inner js-form">
         <div class="popup__title">
           Заполните форму и с вами свяжется менеджер.
         </div>
@@ -884,7 +962,7 @@
 
       </a>
 
-      <form class="popup__inner">
+      <form class="popup__inner js-form">
         <div class="popup__title">
           Открыть доступ к аттестации на 3 дня
         </div>
@@ -950,7 +1028,7 @@
 
       </a>
 
-      <form class="popup__inner">
+      <form class="popup__inner js-form">
         <div class="popup__title">
           Получать публикации и новости
         </div>

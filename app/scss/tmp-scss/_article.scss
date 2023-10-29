@@ -64,9 +64,14 @@
     border: 1px solid $grey;
     margin-bottom: 30px;
 
+    @include adpt ($tab-r) {
+      margin-bottom: 10px;
+    }
+
     @include adpt ($bmob-r) {
       border-radius: 0;
       padding: 0;
+      margin-bottom: 35px;
       border: none;
     }
   }
@@ -207,7 +212,7 @@
     }
   }
 
-  & img:not(.blog-item__img) {
+  & img:not([class]) {
     max-width: 500px;
     width: 100%;
     margin: 15px auto 20px;
@@ -227,11 +232,11 @@
     }
   }
 
-  & ul {
+  & ul:not([class]) {
     margin: 10px 0 20px;
   }
 
-  & li {
+  & li:not([class]) {
     position: relative;
     padding-left: 10px;
 
@@ -304,5 +309,91 @@
         margin-bottom: 10px !important;
       }
     }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 50px;
+
+    @include adpt ($smob-r) {
+      & .social__link {
+        width: 36px;
+        height: 36px;
+      }
+
+      & .social__item:not(:last-child) {
+        margin-right: 6px;
+      }
+
+      & .article__social-text {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__social-text {
+    margin-right: 15px;
+  }
+
+  &__comments-title {
+    margin-bottom: 20px;
+  }
+
+  &__comments-list {
+    padding-left: 30px;
+    margin-bottom: 30px;
+
+    @include adpt ($bmob-r) {
+      padding-left: 0;
+    }
+  }
+
+  &__comments-item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__comments-author {
+    padding-bottom: 9px;
+    border-bottom: 1px solid $grey;
+    margin-bottom: 10px;
+
+    @include adpt ($bmob-r) {
+      font-size: 18px;
+    }
+  }
+
+  &__comments-form {
+    position: relative;
+    padding: 20px 30px;
+    border: 1px solid $grey;
+    border-radius: 20px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 5px;
+      left: 5px;
+      border-radius: 20px;
+      background-color: $blueLight;
+    }
+
+
+  }
+
+  & .form__row {
+    @include adpt ($bmob-r) {
+      align-items: flex-start;
+    }
+  }
+
+  &__comments-form-title {
+    margin-bottom: 20px;
   }
 }

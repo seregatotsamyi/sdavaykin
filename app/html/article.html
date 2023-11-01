@@ -235,22 +235,22 @@
               <ul class="social__list">
     
                 <li class="social__item">
-                  <a class="social__link" href="#">
+                  <a class="social__link" target="_blank" href="https://api.whatsapp.com/send?text=www.google.com" data-action="share/whatsapp/share">
                     <img class="social__img" src="images/social/wa.svg" alt="social" width="26" height="21">
                   </a>
                 </li>
                 <li class="social__item">
-                  <a class="social__link" href="#">
+                  <button class="social__link" onclick="copytext()" >
                     <img class="social__img" src="images/social/link.svg" alt="social" width="26" height="21">
-                  </a>
+                  </button>
                 </li>
                 <li class="social__item">
-                  <a class="social__link" href="#">
+                  <a class="social__link" href="https://telegram.me/share/url?url=ПОЛНЫЙ_АДРЕС_ТЕКУЩЕЙ_СТРАНИЦЫ">
                     <img class="social__img" src="images/social/tg.svg" alt="social" width="26" height="21">
                   </a>
                 </li>
                 <li class="social__item">
-                  <a class="social__link" href="#">
+                  <a class="social__link" href="https://vkontakte.ru/share.php?url=ПОЛНЫЙ_АДРЕС_ТЕКУЩЕЙ_СТРАНИЦЫ">
                     <img class="social__img" src="images/social/vk.svg" alt="social" width="26" height="21">
                   </a>
                 </li>
@@ -474,5 +474,7 @@
 @include('components/_doc1.html')
 @include('components/_access.html')
 @include('components/_public.html')
+
+
 
 @include('components/_footer-scripts.html')

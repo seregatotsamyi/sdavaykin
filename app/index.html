@@ -504,7 +504,7 @@
       </div>
       <div class="consultation__inner">
 
-        <form class="consultation__form">
+        <form class="consultation__form js-form">
           <div class="form">
             <div class="form__row">
               <div class="form__inputs">
@@ -948,7 +948,7 @@
         Заинтересовало? <br>
         Тогда регистрируйтесь!
       </div>
-      <form class="call__inner">
+      <form class="call__inner js-form">
         <div class="call__text">
           После заполнения и отправки формы с вами свяжется менеджер для личного разговора. Уточнив детали, мы пришлём
           логин и пароль для доступа в личный кабинет. Здесь можно задать вопрос консультанту, а в соответствующих
@@ -1242,11 +1242,42 @@
     </div>
   </div>
 </div>
+<div id="popupThank" class="popup">
+  <div class="popup__body">
+    <div class="popup__content ">
+      <a href="#" class="popup__close popup--close">
+
+        <svg class="popup__close-img" width="40" height="40" viewBox="0 0 40 40" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g >
+            <path d="M24.9497 15.0503L15.0502 24.9498"  fill="white" stroke="white" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M15.0503 15.0503L24.9498 24.9498"  fill="white" stroke="white" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </g>
+        
+        </svg>
+
+      </a>
+
+      <div class="popup__inner ">
+        <div class="popup__title">
+         Спасибо за обращение
+        </div>
+        <div class="popup__text">
+         Мы его уже рассматриваем
+        </div>
+      
+      </div>
+
+    </div>
+  </div>
+</div>
 
 <script src="libs/jquery.min.js"></script>
 <script src="libs/jquery.formstyler.min.js"></script>
 <script src="libs/slick.min.js"></script>
-<script src="js/main.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>

@@ -34,6 +34,14 @@ window.onload = function () {
     input.addEventListener("blur", mask, false);
     input.addEventListener("keydown", mask, false)
   });
+
+};
+
+
+$(function () {
+  let width = $(window).width();
+  let bodyJq = $('.body');
+
   //pop-up start
   const popupLinks = document.querySelectorAll('.popup--link');
   const body = document.querySelector('body');
@@ -142,19 +150,15 @@ window.onload = function () {
       popupClose(popupActive);
     }
   });
+
   //pop-up end
-};
 
-
-$(function () {
-  let width = $(window).width();
-  let body = $('.body');
 
   let menu = $('.header__nav-wrap')
 
   $(document).on('click', '.js-toggle-menu', function () {
     menu.toggleClass('_active')
-    body.toggleClass('_fixed')
+    bodyJq.toggleClass('_fixed')
   })
 
 
@@ -184,7 +188,6 @@ $(function () {
 
   function countLines(el, lh) {
     let divHeight = $(el).height()
-    console.log(divHeight / lh)
     return divHeight / lh;
   }
 
@@ -256,6 +259,7 @@ $(function () {
     })
   }
 
+
   $('.js-select').styler();
 
   //js-form
@@ -304,10 +308,8 @@ $(function () {
           if (response == 1) {
             $('.js-form').each(function () {
               $(this)[0].reset();
-              popupClose(document.querySelector('.popup.open'));
               const thankPopUp = document.getElementById("popupThank")
               popupOpen(thankPopUp);
-              console.log(thankPopUp)
             });
           } else {
             alert('Произошла ошибка');
@@ -343,4 +345,86 @@ $(function () {
 
   })
 
+  let validationComment = (nameInput, commentInput) => {
+    let result = 1
+
+
+    const reg = /[а-яА-ЯЁё/ ]+/gm
+
+    if (reg.test(nameInput.val())) {
+      nameInput.removeClass("_error")
+    } else {
+      result = 0
+      nameInput.addClass("_error")
+    }
+
+    if (commentInput.val().length === 0) {
+      commentInput.addClass("_error")
+      result = 0
+    } else {
+      commentInput.removeClass("_error")
+    }
+
+    return result
+  }
+
+  $('.article__comments-form').on('submit', function (event) {
+    event.preventDefault();
+    let formData = $(this).serialize();
+
+    let send = () => {
+      $.ajax({
+        url: 'mail.php',
+        method: 'POST',
+        data: formData,
+        dataType: 'json',
+        encoding: true,
+        success: response => {
+
+          if (response == 1) {
+            $('.js-form').each(function () {
+              $(this)[0].reset();
+            });
+          } else {
+            alert('Произошла ошибка');
+          }
+        },
+        error: function (jqXHR, exception) {
+          if (jqXHR.status === 0) {
+            alert('Not connect. Verify Network.');
+          } else if (jqXHR.status == 404) {
+            alert('Requested page not found (404).');
+          } else if (jqXHR.status == 500) {
+            alert('Internal Server Error (500).');
+          } else if (exception === 'parsererror') {
+            alert('Requested JSON parse failed.');
+          } else if (exception === 'timeout') {
+            alert('Time out error.');
+          } else if (exception === 'abort') {
+            alert('Ajax request aborted.');
+          } else {
+            alert('Uncaught Error. ' + jqXHR.responseText);
+          }
+        }
+      });
+    }
+
+    let nameInput = $(this).find('input[name="name"]')
+    let commentInput = $(this).find('textarea[name="comment"]')
+
+
+    if (validationComment(nameInput, commentInput)) {
+      send()
+    }
+  })
+
 });
+//copytext
+function copytext() {
+  var $tmp = $("<input>");
+  $("body").append($tmp);
+  $tmp.val(window.location.href).select();
+  document.execCommand("copy");
+  $tmp.remove();
+}
+//copytext

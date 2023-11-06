@@ -168,7 +168,7 @@
     }
   }
 
-  & b {
+  & strong {
     font-size: 20px;
     font-weight: 700;
     display: block;
@@ -217,6 +217,26 @@
     width: 100%;
     margin: 15px auto 20px;
     border-radius: 20px;
+
+  }
+
+  & figure {
+    max-width: 500px;
+    width: 100%;
+    margin: 15px auto 20px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+      object-fit: contain;
+      height: auto;
+      border-radius: 20px;
+    }
+
+    & .wp-block-embed__wrapper {
+      display: flex;
+    }
   }
 
   & h4 {
@@ -240,6 +260,7 @@
     position: relative;
     padding-left: 10px;
 
+
     &::before {
       content: "";
       position: absolute;
@@ -249,6 +270,10 @@
       height: 4px;
       background-color: $grey;
       border-radius: 50%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
     }
   }
 
